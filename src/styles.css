@@ -1,0 +1,586 @@
+@import url('https://fonts.cdnfonts.com/css/freudian-one');
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/roseford-demo');
+
+
+@font-face {
+  font-family: 'Lakesight';
+  src: url('./Lakesight.woff2') format('woff2'),
+      url('./Lakesight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f1ed;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: all;
+  background-color: transparent;
+}
+
+.experience {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+/* COLORS */
+
+.white {
+  color: #f9f6e5;
+}
+
+.black {
+  color: #1d1c1c;
+}
+
+/* NAVIGATION BAR */
+.navigation {
+  width: 95%;
+  height: 10vh;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  border-bottom: solid 1px #f9f6e5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.navigation-right {
+  display: flex;
+  gap: 2vw;
+}
+
+.fa-brands {
+  color: #f9f6e5;
+  font-size: 1.5vw;
+  cursor: pointer;
+  transition: 0.25s ease-in;
+}
+.fa-brands:hover {
+  color: #f9f6e575;
+}
+
+.navigation-left {
+  display: flex;
+  gap: 2vw;
+}
+
+.buy {
+  height: 3vw;
+  width: 3vw;
+  border-radius: 50%;
+  border: 1px #f9f6e5 solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.fa-solid {
+  color: #f9f6e5;
+  font-size: 1.25vw;
+  transition: 0.25s ease-in;
+}
+
+.buy:hover .fa-solid {
+  color: #f9f6e575;
+}
+
+.order-now {
+  height: 3vw;
+  width: fit-content;
+  background-color: #f9af42;
+  border-radius: 150px;
+  padding: 0 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.25s ease-in;
+}
+
+.order-now:hover {
+  background-color: #f9af4295;
+}
+
+.order-now-text {
+  font-family: 'Freudian One', sans-serif;
+  font-size: 1vw;
+  font-weight: 100;
+  letter-spacing: 0.05vw;
+  line-height: 0;
+}
+
+/* SECTION ONE */
+
+.background-container {
+  background-image: url('/bk1.png'); /* Adjust the path based on your directory structure */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: fit-content; /* Adjust this based on your layout requirements */
+}
+
+.one {
+}
+
+.one-content {
+  padding: 10% 0;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.one-text-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.one-title {
+}
+
+.title-back {
+  font-family: 'Freudian One', sans-serif;
+  font-size: 9.5vw;
+  font-weight: 300;
+  line-height: 85%;
+  color: #f9f6e5;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+}
+
+.title-front {
+  font-family: 'Freudian One', sans-serif;
+  font-size: 9.5vw;
+  font-weight: 300;
+  line-height: 85%;
+  color: #f9f6e5;
+  margin-bottom: 0;
+  margin-top: 0;
+  z-index: 2;
+  position: relative;
+}
+
+.one-border {
+  width: 30%;
+  height: 1px;
+  border-top: 1px dashed #f9f6e5;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.title-description {
+  font-family: 'Freudian One', sans-serif;
+  font-size: 2vw;
+  font-weight: 300;
+  line-height: 85%;
+  color: #f9f6e5;
+  margin-bottom: 0;
+  margin-top: 0;
+  z-index: 2;
+  position: relative;
+}
+
+.scroll-container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 7.5vh;
+}
+
+.scroll {
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  background-color: #1d1c1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-text {
+  font-family: 'Freudian One', sans-serif;
+  font-size: 1vw;
+  font-weight: 100;
+  letter-spacing: 0.05vw;
+  line-height: 100%;
+  color: #f9f6e5;
+}
+
+/* SECTION TWO ELEMENTS */
+
+.two {
+}
+
+.two {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.two-left {
+  width: 25vw;
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.info-main {
+  opacity: 0;
+  transform: translateX(-5vw);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+.info-main.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.info-ingredients {
+  opacity: 0;
+  transform: translateX(-5vw);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+.info-ingredients.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.two-center {
+  width: 21vw;
+  height: 67.5vh;
+  border-radius: 100px;
+  background-color: #1d1c1c;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.two-center.visible {
+  opacity: 1;
+}
+
+.two-right {
+  width: 25vw;
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.drink-introduction {
+  opacity: 0;
+  transform: translateX(5vw);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+.drink-introduction.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.foodinfo-container {
+  opacity: 0;
+  transform: translateX(5vw);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+.foodinfo-container.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.two-big-headline {
+  font-family: 'ROSEFORD DEMO', sans-serif;
+  font-size: 3.5vw;
+  line-height: 0;
+}
+
+.two-medium-headline {
+  font-family: 'ROSEFORD DEMO', sans-serif;
+  font-size: 1.25vw;
+}
+
+.description {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.25vw;
+  line-height: 115%;
+}
+
+.description-two {
+  font-family: 'Freudian One', sans-serif;
+  font-size: 1.25vw;
+  font-weight: 400;
+}
+
+.foodinfo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 350px;
+}
+
+.foodinfo {
+  display: flex;
+  line-height: 1rem;
+}
+
+.food-padding {
+  margin-left: 0%;
+}
+
+.food-text {
+  width: 300px;
+  height: 100px;
+  text-align: center;
+}
+
+.border {
+  width: 100%;
+  color: #1d1c1c;
+  height: 0px;
+  z-index: 1;
+  border-color: #1d1c1c;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.border-vertical {
+  width: 0px;
+  color: #1d1c1c;
+  height: 100%;
+  z-index: 1;
+  border-color: #1d1c1c;
+  border-style: solid;
+  border-width: 2px;
+}
+
+/* SECTION THREE */
+
+.three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f6e5;
+}
+
+.three-content {
+  width: 100%;
+  height: 100vh;
+  background-color: #f9f6e575;
+  backdrop-filter: blur(16px);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.three-title {
+  font-family: 'ROSEFORD DEMO', sans-serif;
+  font-size: 4vw;
+  text-align: center;
+  color: #1d1c1c;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.three-title.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.three-description {
+  font-family: 'Freudian One', sans-serif;
+  font-size: 1.25vw;
+  font-weight: 400;
+  margin-bottom: 0;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.three-description.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.three-bottom-texts {
+  display: flex;
+  width: 70%;
+  gap: 1vh;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.three-bottom-texts.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.three-bottom-left {
+  width: 50%;
+}
+
+.three-bottom-right {
+  width: 50%;
+}
+
+.three-small-description {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1vw;
+  line-height: 150%;
+  margin-top: 0;
+}
+
+
+
+
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+
+  .title {
+    margin-top: 15%;
+    color: #531500;
+    font-size: 8rem;
+    z-index: 1;
+    line-height: 8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    text-align: center;
+  }
+  
+  .front {
+    color: #531500;
+    font-size: 9rem;
+    z-index: 6;
+    position: relative;
+    line-height: 8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    text-align: center;
+  }
+
+}
+
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 4rem;
+  width: 100vw;
+  height: 100vh;
+  z-index: 12;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background-color: #f9f6e5;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.loading-screen--hidden {
+  animation: fade-out 0.5s ease-in-out forwards 1s;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loading-screen__title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 10rem;
+  text-transform: uppercase;
+  color: #1d1c1c;
+  margin: 0;
+}
+
+.progress__container {
+  width: 100%;
+  height: 1rem;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.progress__bar {
+  width: 0;
+  height: 100%;
+  background-color: #f9af42;
+  transition: width 0.5s ease-in-out;
+}
+
+
+
