@@ -59,19 +59,25 @@ section {
 
 /* NAVIGATION BAR */
 .navigation {
-  width: 95%;
+  width: 100%;
   height: 10vh;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
+  padding: 0 2.5%;
   border-bottom: solid 1px #f9f6e5;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
+  transition: background-color 0.3s ease, height 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.navigation.scrolled {
+  background-color: #79877025; /* Change to your preferred color */
+  height: 8vh; /* Adjust to your desired height */
+  backdrop-filter: blur(7px);
 }
 
 .navigation-right {
@@ -81,7 +87,7 @@ section {
 
 .fa-brands {
   color: #f9f6e5;
-  font-size: 1.5vw;
+  font-size: 1.25vw;
   cursor: pointer;
   transition: 0.25s ease-in;
 }
@@ -95,8 +101,8 @@ section {
 }
 
 .buy {
-  height: 3vw;
-  width: 3vw;
+  height: 2.75vw;
+  width: 2.75vw;
   border-radius: 50%;
   border: 1px #f9f6e5 solid;
   display: flex;
@@ -107,7 +113,7 @@ section {
 
 .fa-solid {
   color: #f9f6e5;
-  font-size: 1.25vw;
+  font-size: 1vw;
   transition: 0.25s ease-in;
 }
 
@@ -116,11 +122,11 @@ section {
 }
 
 .order-now {
-  height: 3vw;
+  height: 2.75vw;
   width: fit-content;
   background-color: #f9af42;
   border-radius: 150px;
-  padding: 0 1vw;
+  padding: 0 1.5vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -138,6 +144,39 @@ section {
   font-weight: 100;
   letter-spacing: 0.05vw;
   line-height: 0;
+}
+
+/* NAVIGATION BOTTOM */
+
+.navigation-bottom {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2.5%;
+  align-items: center;
+}
+
+.navigation-bottom-left, .navigation-bottom-right {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.navigation-bottom-text {
+  font-family: 'Freudian One', sans-serif;
+  font-size: 1vw;
+  color: #f9f6e5;
+  font-weight: 200;
+}
+
+.fa-bolt {
+  color: #f9af42;
+  font-size: 2vw;
 }
 
 /* SECTION ONE */

@@ -62,7 +62,7 @@ function App() {
         <div  className="experience">
           <CanvasContainer />
         </div>
-
+        
         <div className="background-container" >
           <Section1 />
           <Section2 />
