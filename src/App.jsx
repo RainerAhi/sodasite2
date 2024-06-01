@@ -1,6 +1,5 @@
 import { Loader } from "@react-three/drei";
 import CanvasContainer from "./CanvasContainer";
-import { SectionFour } from "./Sections/SectionFour";
 import Lenis from "@studio-freight/lenis";
 
 import { useProgress } from "@react-three/drei";
@@ -8,6 +7,8 @@ import { Suspense, useEffect, useRef } from "react";
 import { Section1 } from "./Sections/Section1";
 import { Section3 } from "./Sections/Section3";
 import { Section2 } from "./Sections/Section2";
+import { Section4 } from "./Sections/Section4";
+import { Section5 } from "./Sections/Section5";
 
 const LoadingScreen = () => {
   const { progress, active } = useProgress();
@@ -65,6 +66,10 @@ function App() {
           <Section2 />
         </div>
         <Section3 />
+        <div className="background-container" >
+          <Section4 />
+          <Section5 />
+        </div>
             
       </>
     )
