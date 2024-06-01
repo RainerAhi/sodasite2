@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import CanvasContainer from "../CanvasContainer";
 
 export const Section2 = () => {
 
@@ -53,6 +54,10 @@ export const Section2 = () => {
 
     return (
         <section className="section two" >
+
+        <div  className="experience">
+          <CanvasContainer />
+        </div>
 
         <div className="two-left" >
             <div className={`info-main ${isVisibleOne ? 'visible' : ''}`} ref={oneRef}>

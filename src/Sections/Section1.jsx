@@ -43,7 +43,7 @@ export const Section1 = () => {
             </div>
             <div className="navigation-bottom" >
               <div className="navigation-bottom-left">
-                <i class="fa-solid fa-bolt"></i>
+                <i class="fa-solid fa-bolt bolt-two"></i>
                 {/* <h1 className="navigation-bottom-text" >ENJOY THE MOMENT</h1> */}
               </div>
               <div className="navigation-bottom-right">

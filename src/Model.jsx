@@ -52,6 +52,17 @@ export default function Model(props) {
           immediateRender: false,
         },
       })
+
+      .to(".experience", {
+        position: "absolute",
+        scrollTrigger: {
+          trigger: ".three",
+          start: "top bottom", // Adjust start to start later
+          end: "bottom 100%",
+          scrub: true,
+          immediateRender: false,
+        },
+      })
       
 
     })

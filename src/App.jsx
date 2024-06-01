@@ -59,9 +59,6 @@ function App() {
     return (
       <>
         <LoadingScreen />
-        <div  className="experience">
-          <CanvasContainer />
-        </div>
         
         <div className="background-container" >
           <Section1 />

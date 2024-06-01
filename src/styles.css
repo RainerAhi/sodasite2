@@ -45,7 +45,13 @@ section {
   position: fixed;
   top: 0;
   z-index: 2;
+  transition: all 0.3s ease; /* Smooth transition */
 }
+
+.experience.sticky {
+  position: relative;
+}
+
 
 /* COLORS */
 
@@ -176,7 +182,11 @@ section {
 
 .fa-bolt {
   color: #f9af42;
-  font-size: 2vw;
+  font-size: 3vw;
+}
+
+.bolt-two {
+  transform: scaleX(-1);
 }
 
 /* SECTION ONE */
@@ -289,6 +299,7 @@ section {
 /* SECTION TWO ELEMENTS */
 
 .two {
+  position: relative;
 }
 
 .two {
