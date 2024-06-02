@@ -39,14 +39,14 @@ export const Section3 = () => {
     return (
         <section className="three" >
             <div className="three-content">
-                <h1 className={`three-description ${isVisibleOne ? 'visible' : ''}`} ref={oneRef}>ABOUT BREWDISTRICT24</h1>
-                <h1 className={`three-title ${isVisibleTwo ? 'visible' : ''}`} ref={twoRef}>WELCOME TO THE NEIGHBORHOOD. <br />THIS IS WHERE WE COME <br /> TOGETHER AS ONE</h1>
+                <h1 className={`three-description ${isVisibleOne ? 'visible' : ''}`} ref={oneRef}>ABOUT DIALEDWEB SELTZERS</h1>
+                <h1 className={`three-title ${isVisibleTwo ? 'visible' : ''}`} ref={twoRef}>WELCOME TO THE CLUB <br />THIS IS WHERE WE REFRESH <br /> AND INSPIRE</h1>
                 <div className={`three-bottom-texts ${isVisibleThree ? 'visible' : ''}`} ref={threeRef}>
                     <div className="three-bottom-left">
-                        <h1 className="three-small-description" >In good company, we immerse ourselves in ‘gezelligheid’. Together we laugh, drink beer and open ourselves up to new surprising experiences. We give way to all our senses so we can connect to a world that is packed with taste.</h1>
+                        <h1 className="three-small-description" >Here, we celebrate connection and shared experiences. With DialedWeb Seltzers, every moment becomes an opportunity to savor crisp, natural flavors that invigorate and uplift. We embrace the simple joys of life, letting each sip renew our energy and spirit.</h1>
                     </div>
                     <div className="three-bottom-right">
-                        <h1 className="three-small-description" >Our classic craft beers are brewed without fuss. With water, grain, yeast and hops, we return to the essence where the most diverse and authentic flavors are created. Pure and honest. Damn delicious.</h1>
+                        <h1 className="three-small-description" > Crafted with care and precision, our seltzers blend 5% alcohol with only 100 calories, offering pure refreshment without compromise. Authentic and revitalizing, DialedWeb Seltzers are your perfect companion for any occasion. Refresh your world.</h1>
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@ import { Loading } from './Loading'
 import Model from './Model'
 gsap.registerPlugin(ScrollTrigger)
 
-export default function Experience() {
+export default function Experience({ rotate, setRotate }) {
 
   const { camera, scene } = useThree()
 
@@ -44,7 +44,7 @@ export default function Experience() {
       <SoftShadows intensity={ 20 } />
       <Suspense fallback={ <Loading /> } >
         <Float speed={ 2 } >
-          <Model position={ [ 0, 0, 0 ] } scale={ 0.9 } />
+          <Model rotate={rotate} setRotate={setRotate} position={ [ 0, 0, 0 ] } scale={ 0.9 } />
         </Float>  
       </Suspense>
       <OrbitControls ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />

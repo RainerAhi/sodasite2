@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export const Section1 = () => {
     const [hideScrollText, setHideScrollText] = useState(false);
     const [navScrolled, setNavScrolled] = useState(false);
+    const [showOverlay, setShowOverlay] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -23,42 +25,71 @@ export const Section1 = () => {
         };
     }, []);
 
+    const toggleOverlay = () => {
+        setShowOverlay(!showOverlay);
+    };
+
     return (
         <section className="one">
             <div className={`navigation ${navScrolled ? "scrolled" : ""}`}>
                 <div className="navigation-right">
-                    <i className="fa-brands fa-instagram"></i>
-                    <i className="fa-brands fa-tiktok"></i>
-                    <i className="fa-brands fa-twitter"></i>
-                    <i className="fa-brands fa-discord"></i>
+                    <motion.div
+                        whileHover={{ y: -5 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    >
+                        <i className="fa-brands navigation-icons fa-instagram"></i>
+                    </motion.div>
+                    <motion.div
+                        whileHover={{ y: -5 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    >
+                        <i className="fa-brands navigation-icons fa-youtube"></i>
+                    </motion.div>
+                    <motion.div
+                        whileHover={{ y: -5 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    >
+                        <i className="fa-brands navigation-icons fa-tiktok"></i>
+                    </motion.div>
+                    <motion.div
+                        whileHover={{ y: -5 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    >
+                        <i className="fa-solid navigation-icons fa-envelope"></i>
+                    </motion.div>
                 </div>
                 <div className="navigation-left">
-                    <div className="buy">
+                    <motion.div
+                        className="buy"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    >
                         <i className="fa-solid fa-cart-shopping"></i>
-                    </div>
-                    <div className="order-now">
-                        <h1 className="order-now-text">ORDER NOW</h1>
-                    </div>
+                    </motion.div>
+                    <motion.button
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                        className="contact-button" 
+                        onClick={toggleOverlay}
+                    >
+                        <h1 className="button-text" >CONTACT</h1>
+                    </motion.button>
                 </div>
             </div>
             <div className="navigation-bottom" >
               <div className="navigation-bottom-left">
-                <i class="fa-solid fa-bolt bolt-two"></i>
-                {/* <h1 className="navigation-bottom-text" >ENJOY THE MOMENT</h1> */}
+                <i className="fa-solid fa-bolt bolt-two"></i>
               </div>
               <div className="navigation-bottom-right">
-                {/* <h1 className="navigation-bottom-text" >ENJOY THE MOMENT</h1> */}
-                <i class="fa-solid fa-bolt"></i>
+                <i className="fa-solid fa-bolt"></i>
               </div>
             </div>
             <div className="one-content">
                 <div className="one-text-contents">
                     <div className="one-title">
-                        <h1 className="title-back">
-                            CLASSIC CRAFT BEERS,
-                            <br />
-                            BREWED WITHOUT
-                        </h1>
+                        <h1 className="title-back">CLASSIC DIALED SELTZERS,<br />MADE TO CONQUER</h1>
                     </div>
                     <div className="one-border" />
                     <h1
@@ -69,7 +100,7 @@ export const Section1 = () => {
                         }}
                         className="title-description"
                     >
-                        PURE, HONEST AND DAMN DELICIOUS
+                        FRESH, REFRESHING AND ENERGIZING
                     </h1>
                 </div>
                 <div className="scroll-container">
@@ -85,6 +116,56 @@ export const Section1 = () => {
                     </div>
                 </div>
             </div>
+            <AnimatePresence>
+                {showOverlay && (
+                    <motion.div
+                        initial={{ y: "-100vh" }}
+                        animate={{ y: 0 }}
+                        exit={{ y: "-100vh" }}
+                        transition={{ type: "tween", duration: 0.5, ease: "easeInOut" }}
+                        className="overlay"
+                    >
+                        <div className="overlay-content">
+                            <h1 className="title-back black">CONTACT</h1>
+                            <form className="contact-form">
+                                <div className="form-group">
+                                    <label>
+                                        <p className="description-contact" >First Name</p>
+                                    </label>
+                                    <input type="text" name="firstName" />
+                                </div>
+                                <div className="form-group">
+                                    <label>
+                                        <p className="description-contact" >Last Name</p>
+                                    </label>
+                                    <input type="text" name="lastName" />
+                                </div>
+                                <div className="form-group">
+                                    <label>
+                                        <p className="description-contact" >Email</p>
+                                    </label>
+                                    <input type="email" name="email" />
+                                </div>
+                                <div className="form-group">
+                                    <label>
+                                        <p className="description-contact" >Message</p>
+                                    </label>
+                                    <textarea name="message"></textarea>
+                                </div>
+                                <div className="form-actions">
+                                    <button type="button" onClick={toggleOverlay}>
+                                        <h1 className="button-text" >CLOSE</h1>
+                                    </button>
+                                    <button type="submit">
+                                        <h1 className="button-text" >SUBMIT</h1>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 };
+

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import CanvasContainer from "../CanvasContainer";
+import { motion } from "framer-motion"
 
 export const Section2 = () => {
 
@@ -8,6 +9,8 @@ export const Section2 = () => {
     const [isVisibleThree, setIsVisibleThree] = useState(false);
     const [isVisibleFour, setIsVisibleFour] = useState(false);
     const [isVisibleFive, setIsVisibleFive] = useState(false);
+
+    const [rotate, setRotate] = useState(false);
   
     const oneRef = useRef(null);
     const twoRef = useRef(null);
@@ -52,22 +55,26 @@ export const Section2 = () => {
       };
     }, []);
 
+    const handleRotate = () => {
+      setRotate(true);
+  };
+
     return (
         <section className="section two" >
 
         <div  className="experience">
-          <CanvasContainer />
+          <CanvasContainer rotate={rotate} setRotate={setRotate} />
         </div>
 
         <div className="two-left" >
             <div className={`info-main ${isVisibleOne ? 'visible' : ''}`} ref={oneRef}>
-                <p className="description-two white" >PREMIUM QUALITY</p>
-                <h1 className="two-big-headline" >SODA</h1>
+                <p className="description-two white" >NATURALLY FLAVORED</p>
+                <h1 className="two-big-headline" >SELTZER</h1>
                 <p className="description-two white" >330 ML</p>
             </div>
             <div className={`info-ingredients ${isVisibleTwo ? 'visible' : ''}`} ref={twoRef}>
                 <p className="two-medium-headline white" >INGREDIENTS</p>
-                <h1 className="description-two" >WATER, ORGANIC APPLE JUICE, BLACK TEA, CARBON DIOXIDE, ANTIOXIDANT</h1>
+                <h1 className="description-two" >ALCOHOL, NATURAL FLAVOR, CANE SUGAR, SODIUM CITRATE, TRIPOTASSIUM CITRATE</h1>
             </div>
         </div>
 
@@ -76,32 +83,18 @@ export const Section2 = () => {
         <div className="two-right" >
             <div className={`drink-introduction ${isVisibleThree ? 'visible' : ''}`} ref={threeRef}>
                 <h1 className="two-medium-headline white" >INTRODUCION TO DRINK</h1>
-                <p className="description" >This unique concoction combines the crisp sweetness of organic apple juice with the subtle sophistication of black tea, fizzed to perfection with natural carbon dioxide. </p>
+                <p className="description" >Discover the essence of refreshment with Classic Dialed Seltzers. Crafted for those who embrace life's challenges, our naturally flavored seltzer provides a crisp and energizing experience. With 5% alcohol and only 100 calories, it's the perfect blend of flavor and vitality. Whether you're pushing your limits or relaxing after a long day, Classic Dialed Seltzers are there to keep you refreshed and invigorated. Seize every moment with a drink that's as bold and dynamic as you are.</p>
             </div>
-            <div className={`foodinfo-container ${isVisibleFour ? 'visible' : ''}`} ref={fourRef}>
-                <div className="foodinfo" >
-                    <div className="food-text" >
-                        <h1 className="two-medium-headline white" >CALORIES</h1>
-                        <h1 className="description" >160</h1>
-                    </div>
-                    <div className="border-vertical" />
-                    <div className="food-text" >
-                        <h1 className="two-medium-headline white" >PROTEIN</h1>
-                        <h1 className="description" >0.3g</h1>
-                    </div>
-                </div>
-                <div className="border" />
-                <div className="foodinfo" >
-                    <div className="food-text" >
-                        <h1 className="two-medium-headline white" >SUGAR</h1>
-                        <h1 className="description" >5g</h1>
-                    </div>
-                    <div className="border-vertical" />
-                    <div className="food-text" >
-                        <h1 className="two-medium-headline white" >VITAMIN C</h1>
-                        <h1 className="description" >10mg</h1>
-                    </div>
-                </div>
+            <div className={`rotation-button ${isVisibleFour ? 'visible' : ''}`} ref={fourRef}>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                className="rotate-can" 
+                onClick={handleRotate} 
+              >
+                <h1 className="button-text" >ROTATE CAN</h1>
+              </motion.button>
             </div>
         </div>
 

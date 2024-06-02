@@ -1,15 +1,25 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useThree } from "@react-three/fiber";
 import { useLayoutEffect } from "react";
 
-export default function Model(props) {
+export default function Model({ rotate, setRotate, ...props }) {
 
   const { camera, scene } = useThree()
 
   const model = useRef()
+
+      useEffect(() => {
+        if (rotate) {
+            gsap.to(model.current.rotation, {
+                y: model.current.rotation.y + Math.PI * 2,
+                duration: 2,
+                onComplete: () => setRotate(false),
+            });
+        }
+    }, [rotate, setRotate]);
 
   const tl = gsap.timeline()
 
