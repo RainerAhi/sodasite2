@@ -153,12 +153,24 @@ export const Section1 = () => {
                                     <textarea name="message"></textarea>
                                 </div>
                                 <div className="form-actions">
-                                    <button type="button" onClick={toggleOverlay}>
+                                    <motion.button
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9 }}
+                                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                                        type="button"
+                                        onClick={toggleOverlay}
+                                    >
                                         <h1 className="button-text" >CLOSE</h1>
-                                    </button>
-                                    <button type="submit">
+                                    </motion.button>
+                                    <motion.button
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9 }}
+                                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                                        type="submit"
+                                        onClick={toggleOverlay}
+                                    >
                                         <h1 className="button-text" >SUBMIT</h1>
-                                    </button>
+                                    </motion.button>
                                 </div>
                             </form>
                         </div>
