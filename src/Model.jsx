@@ -80,18 +80,17 @@ export default function Model({ rotate, setRotate, ...props }) {
 
   }, [])
 
-  const { nodes, materials } = useGLTF("./can.glb");
+  const { nodes, materials } = useGLTF("./newcan.glb");
   return (
     <group {...props} dispose={null} ref={ model } >
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes["Soda_can_(Short)"].geometry}
-        material={materials["Can metal material"]}
-        scale={0.056}
+        geometry={nodes.can_Baked.geometry}
+        material={materials['can_Baked.004']}
       />
     </group>
   );
 }
 
-useGLTF.preload("./can.glb");
+useGLTF.preload("./newcan.glb");
