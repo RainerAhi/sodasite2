@@ -84,7 +84,7 @@ export default function Model({ rotate, setRotate, ...props }) {
   const { nodes, materials } = useGLTF(isMobile ? mobileModelPath : desktopModelPath);
 
   return (
-    <group {...props} dispose={null} ref={model}>
+    <group scale={ 0.45 } {...props} dispose={null} ref={model}>
       <mesh castShadow receiveShadow geometry={nodes.can.geometry} material={materials.can} />
     </group>
   );

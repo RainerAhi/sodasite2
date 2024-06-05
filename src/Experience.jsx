@@ -41,10 +41,9 @@ export default function Experience({ rotate, setRotate }) {
 
   return (
     <>
-      <SoftShadows intensity={ 20 } />
       <Suspense fallback={ <Loading /> } >
         <Float speed={ 2 } >
-          <Model rotate={rotate} setRotate={setRotate} position={ [ 0, 0, 0 ] } scale={ 0.45 } />
+          <Model rotate={rotate} setRotate={setRotate} position={ [ 0, 0, 0 ] } />
         </Float>  
       </Suspense>
       <OrbitControls ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />
