@@ -377,6 +377,33 @@ section {
   color: #f9f6e5;
 }
 
+@keyframes dashAnimation {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.dottedLine {
+  border-radius: inherit;
+}
+
+.dottedLine svg {
+  width: 50%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.dottedLine .cls-1 {
+  fill: none;
+  stroke: #f9f6e5;
+  stroke-width: 2;
+  stroke-dasharray: 5, 2;
+  animation: dashAnimation 5s linear infinite;
+}
+
 /* SECTION TWO ELEMENTS */
 
 .two {
@@ -418,6 +445,15 @@ section {
 }
 
 
+@keyframes borderAnimation {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
 .two-center {
   width: 21vw;
   height: 67.5vh;
@@ -425,10 +461,22 @@ section {
   background-color: #1d1c1c;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  position: relative;
 }
+
 .two-center.visible {
   opacity: 1;
 }
+
+.canInAnimation svg rect {
+  fill: none;
+  stroke: #f9f6e5;
+  stroke-width: 2;
+  stroke-dasharray: 10, 10; /* Adjust the dash array as needed */
+  stroke-dashoffset: 1000;
+  animation: borderAnimation 15s linear infinite;
+}
+
 
 .two-right {
   width: 25vw;

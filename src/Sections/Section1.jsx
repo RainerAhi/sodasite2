@@ -91,7 +91,11 @@ export const Section1 = () => {
                     <div className="one-title">
                         <h1 className="title-back">CLASSIC DIALED SELTZERS,<br />MADE TO CONQUER</h1>
                     </div>
-                    <div className="one-border" />
+                    <div className="dottedLine" style={{ opacity: hideScrollText ? 0 : 1, transition: "opacity 0.3s ease-in-out", pointerEvents: hideScrollText ? "none" : "auto", }}>
+                        <svg viewBox="0 0 800 1">
+                            <line className="cls-1" y1=".5" x2="800" y2=".5" />
+                        </svg>
+                    </div>
                     <h1
                         style={{
                             opacity: hideScrollText ? 0 : 1,
