@@ -7,7 +7,7 @@ import { useLayoutEffect, useState } from "react";
 
 export default function Model3({props }) {
   const { camera, scene } = useThree();
-  const model3 = useRef();
+  const model2 = useRef();
   const controlsRef = useRef()
   const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
 
@@ -37,44 +37,61 @@ export default function Model3({props }) {
 
       .to(controlsRef.current.target, {
         x: 0,
+        z: 0,
         scrollTrigger: {
           trigger: ".four",
-          start: "top bottom",
+          start: "top 70%",
           end: "top top",
           scrub: true,
           immediateRender: false,
         },
       })
 
-      .to(model3.current.rotation, {
-        y: Math.PI * -2,
+      .to(model2.current.scale, {
+        x: 0.65,
+        y: 0.65,
+        z: 0.65,
         scrollTrigger: {
           trigger: ".four",
-          start: "top bottom",
+          start: "top 70%",
           end: "top top",
           scrub: true,
           immediateRender: false,
         },
       })
+
+      .to(model2.current.rotation, {
+        y: Math.PI * -2,
+        scrollTrigger: {
+          trigger: ".four",
+          start: "top 70%",
+          end: "top top",
+          scrub: true,
+          immediateRender: false,
+        },
+      })
+      
+
+      
 
 
     });
   }, []);
 
-  const desktopModelPath = "./desktop.glb";
-  const mobileModelPath = "./mobile.glb";
+  const desktopModelPath = "./mangocan.glb";
+  const mobileModelPath = "./mangocan.glb";
 
   const { nodes, materials } = useGLTF(isMobile ? mobileModelPath : desktopModelPath);
 
   return (
     <>
         <OrbitControls target={ [ -5, 0, 0 ] } ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />
-        <group scale={ 0.65 } {...props} dispose={null} ref={model3}>
+        <group scale={ 0.4 } {...props} dispose={null} ref={model2}>
             <mesh castShadow receiveShadow geometry={nodes.can.geometry} material={materials.can} />
         </group>
     </>
   );
 }
 
-useGLTF.preload('./desktop.glb')
-useGLTF.preload("./mobile.glb");
+useGLTF.preload("./mangocan.glb")
+useGLTF.preload("./mangocan.glb");

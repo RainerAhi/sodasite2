@@ -41,7 +41,7 @@ export const Section4 = () => {
         </div>
         <div className='four-experience' >
             <div ref={ref} className='four-container' >
-                <h1 className='four-container-text' >BLACK CHERRY</h1>
+                <h1 className='four-container-text' >MANGO BLAST</h1>
                 <div ref={view1} className='view' style={ { height: "100%", width: "50vw" } } />
                 <div className='mobile-scroll' />
                 <Canvas eventSource={ref} className='canvas' >
