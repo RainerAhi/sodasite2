@@ -79,14 +79,7 @@ export const Section2 = () => {
         </div>
 
         <div className={`two-center ${isVisibleFive ? 'visible' : ''}`} ref={fiveRef}>
-  <div className="innerCanWrapper">
-    <div className="canInAnimation is-inview" data-scroll="" data-scroll-direct="">
-      <svg viewBox="0 0 100 100" width="21vw" height="67.5vh">
-        <rect className="cls-3" x=".5" y=".5" width="100%" height="100%" rx="50" ry="50"></rect>
-      </svg>
-    </div>
-  </div>
-</div>
+        </div>
 
 
         <div className="two-right" >
@@ -99,10 +92,11 @@ export const Section2 = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                className="rotate-can" 
+                className="wave-button" 
                 onClick={handleRotate} 
               >
                 <h1 className="button-text" >ROTATE CAN</h1>
+                <div className='wave' />
               </motion.button>
             </div>
         </div>

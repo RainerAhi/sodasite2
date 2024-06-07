@@ -231,6 +231,8 @@ section {
   font-weight: 100;
   letter-spacing: 0.05vw;
   line-height: 0;
+  z-index: 10;
+  position: relative;
 }
 
 /* NAVIGATION BOTTOM */
@@ -462,20 +464,14 @@ section {
   opacity: 0;
   transition: opacity 1s ease-in-out;
   position: relative;
+  display: flex;
+  align-items: start
 }
 
 .two-center.visible {
   opacity: 1;
 }
 
-.canInAnimation svg rect {
-  fill: none;
-  stroke: #f9f6e5;
-  stroke-width: 2;
-  stroke-dasharray: 10, 10; /* Adjust the dash array as needed */
-  stroke-dashoffset: 1000;
-  animation: borderAnimation 15s linear infinite;
-}
 
 
 .two-right {
@@ -522,7 +518,7 @@ section {
 
 .two-big-headline {
   font-family: 'ROSEFORD DEMO', sans-serif;
-  font-size: 3.5vw;
+  font-size: 3.51vw;
   line-height: 0;
 }
 
@@ -639,7 +635,7 @@ section {
 
 .four-content {
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -650,6 +646,7 @@ section {
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: row;
   position: absolute;
   top: 0;
   left: 0;
@@ -661,24 +658,33 @@ section {
 
 .four-container {
   position: relative;
-  width: 50vw;
+  width: 25vw;
   height: 67.5vh;
   border-radius: 100px;
+  background-color: #f9f6e550;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.four-container-text {
+.four-container-content {
   position: absolute;
-  bottom: 0;
+  bottom: 2vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 20;
+}
+
+.four-container-text {
   font-family: 'Freudian One', sans-serif;
   font-size: 1.25vw;
   font-weight: 400;
 }
 
 .view {
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   align-items: center;
   justify-content: left;
@@ -705,6 +711,109 @@ section {
   position: relative;
 }
 
+.wave-button {
+  height: 2.75vw;
+  width: fit-content;
+  background-color: #7ecf86;
+  border-radius: 150px;
+  padding: 0 1.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+/* WAVE BUTTON */
+
+.wave {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: url('/wave.svg');
+  background-size: 200% 100%;
+  top: 100%;
+  left: 0;
+  animation: wave 2s linear infinite;
+  transition: 0.5s;
+}
+
+@keyframes wave {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 200%;
+  }
+}
+
+.wave-button:hover .wave {
+  top: 50%;
+}
+
+/* MOVING LOGOS */
+
+.available-in {
+  width: 100%;
+  height: 22.5vh;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.available-in-text {
+  font-family: 'Freudian One', sans-serif;
+  font-size: 3vw;
+  font-weight: 400;
+  margin-bottom: 0;
+  color: #f9f6e5;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 2vh 0;
+  background: transparent;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 0;
+  background-color: #7ecf86;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 15vw;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 1.75vw;
+  margin: 0 7vw;
+  opacity: 1;
+}
+
+
 /* COLORS */
 
 .white {
@@ -714,6 +823,8 @@ section {
 .black {
   color: #1d1c1c;
 }
+
+
 
 
 

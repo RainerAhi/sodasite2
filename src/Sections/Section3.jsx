@@ -40,7 +40,7 @@ export const Section3 = () => {
         <section className="three" >
             <div className="three-content">
                 <h1 className={`three-description ${isVisibleOne ? 'visible' : ''}`} ref={oneRef}>ABOUT DIALEDWEB SELTZERS</h1>
-                <h1 className={`three-title ${isVisibleTwo ? 'visible' : ''}`} ref={twoRef}>WELCOME TO THE CLUB <br />THIS IS WHERE WE REFRESH <br /> AND INSPIRE</h1>
+                <h1 className={`three-title reveal-type ${isVisibleTwo ? 'visible' : ''}`} ref={twoRef}>WELCOME TO THE CLUB <br />THIS IS WHERE WE REFRESH <br /> AND INSPIRE</h1>
                 <div className={`three-bottom-texts ${isVisibleThree ? 'visible' : ''}`} ref={threeRef}>
                     <div className="three-bottom-left">
                         <h1 className="three-small-description" >Here, we celebrate connection and shared experiences. With DialedWeb Seltzers, every moment becomes an opportunity to savor crisp, natural flavors that invigorate and uplift. We embrace the simple joys of life, letting each sip renew our energy and spirit.</h1>

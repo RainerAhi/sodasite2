@@ -38,6 +38,7 @@ export default function Model3({props }) {
       .to(controlsRef.current.target, {
         x: 0,
         z: 0,
+        y: -0.5,
         scrollTrigger: {
           trigger: ".four",
           start: "top 70%",
@@ -48,9 +49,9 @@ export default function Model3({props }) {
       })
 
       .to(model2.current.scale, {
-        x: 0.65,
-        y: 0.65,
-        z: 0.65,
+        x: 0.6,
+        y: 0.6,
+        z: 0.6,
         scrollTrigger: {
           trigger: ".four",
           start: "top 70%",
@@ -78,8 +79,8 @@ export default function Model3({props }) {
     });
   }, []);
 
-  const desktopModelPath = "./mangocan.glb";
-  const mobileModelPath = "./mangocan.glb";
+  const desktopModelPath = "./desktop.glb";
+  const mobileModelPath = "./mobile.glb";
 
   const { nodes, materials } = useGLTF(isMobile ? mobileModelPath : desktopModelPath);
 
@@ -93,5 +94,5 @@ export default function Model3({props }) {
   );
 }
 
-useGLTF.preload("./mangocan.glb")
-useGLTF.preload("./mangocan.glb");
+useGLTF.preload("./desktop.glb")
+useGLTF.preload("./mobile.glb");

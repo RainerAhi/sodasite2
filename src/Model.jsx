@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useThree } from "@react-three/fiber";
 import { useLayoutEffect, useState } from "react";
+import SplitType from 'split-type'
 
 export default function Model({ rotate, setRotate, ...props }) {
   const { camera, scene } = useThree();
@@ -26,7 +27,7 @@ export default function Model({ rotate, setRotate, ...props }) {
     if (rotate) {
       gsap.to(model.current.rotation, {
         y: model.current.rotation.y + Math.PI * 2,
-        duration: 2,
+        duration: 1,
         onComplete: () => setRotate(false),
       });
     }
@@ -36,6 +37,29 @@ export default function Model({ rotate, setRotate, ...props }) {
   let mm = gsap.matchMedia();
 
   useLayoutEffect(() => {
+
+    const cont = document.querySelector(".carousel");
+    const splitTypes = document.querySelectorAll('.reveal-type')
+
+    splitTypes.forEach((char,i) => {
+
+      const bg = char.dataset.bgColor
+      const fg = char.dataset.fgColor
+
+      const text = new SplitType(char, { types: 'chars'})
+
+      gsap.from(text.chars, {
+              scrollTrigger: {
+                  trigger: char,
+                  start: 'top 80%',
+                  end: 'bottom 60%',
+                  scrub: true,
+              },
+              opacity: 0.2,
+              stagger: 0.1,
+      })
+  })
+
     mm.add({
       isDesktop: "(min-width: 800px)",
       isMobile: "(max-width: 799px)"

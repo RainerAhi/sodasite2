@@ -71,10 +71,11 @@ export const Section1 = () => {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                        className="contact-button" 
+                        className="wave-button" 
                         onClick={toggleOverlay}
                     >
                         <h1 className="button-text" >CONTACT</h1>
+                        <div className='wave' />
                     </motion.button>
                 </div>
             </div>
