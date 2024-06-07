@@ -853,13 +853,25 @@ section {
 
 .logos-slide {
   display: inline-block;
-  animation: 29s slide infinite linear;
+  animation: 27s slide infinite linear;
 }
 
 .logos-slide img {
   height: 4vw;
   margin: 0 7vw;
   opacity: 1;
+}
+
+
+/* LOGOS CAROUSEL */
+
+.logos-carousel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  gap: 4vw;
 }
 
 
