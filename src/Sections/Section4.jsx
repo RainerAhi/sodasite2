@@ -33,7 +33,7 @@ export const Section4 = () => {
       <div className='four-content'>
         <h1 className='four-title'>PRODUCTS</h1>
         <div className='available-in'>
-          <h1 className='available-in-text'>AVAILABLE IN</h1>
+          <h1 className='available-in-text'>AVAILABLE AT</h1>
           <div className='logos'>
             <div className='logos-slide'>
               <img src='./dw.png' />
