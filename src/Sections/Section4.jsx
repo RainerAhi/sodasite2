@@ -64,7 +64,7 @@ export const Section4 = () => {
                 {hoveredContainer === 'mango' && (
                     <motion.img
                     className='motion-image-left'
-                    src='./splashr.png' // Replace with your image path
+                    src='./splashr3.png' // Replace with your image path
                     initial={{ x: '100%', scale: 0, opacity: 0 }}
                     animate={{ x: '0%', scale: 1, opacity: 1 }}
                     exit={{ x: '100%', scale: 0, opacity: 0 }}
@@ -76,7 +76,7 @@ export const Section4 = () => {
                 {hoveredContainer === 'mango' && (
                     <motion.img
                     className='motion-image-right'
-                    src='./mang.png' // Replace with your image path
+                    src='./mangr.png' // Replace with your image path
                     initial={{ x: '-100%', scale: 0, opacity: 0 }}
                     animate={{ x: '0%', scale: 1, opacity: 1 }}
                     exit={{ x: '-100%', scale: 0, opacity: 0 }}
