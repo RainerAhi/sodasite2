@@ -107,7 +107,6 @@ export const Section4 = () => {
                   <Model2 position={[0, 0, 0]} />
                 </Float>
               </Suspense>
-              <OrbitControls minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={false} enableRotate={false} enablePan={false} />
               <Environment preset='warehouse' />
             </View>
           </Canvas>
@@ -157,10 +156,9 @@ export const Section4 = () => {
             <View track={view2}>
               <Suspense fallback={<Loading />}>
                 <Float speed={2}>
-                  <Model3 position={[0, 0, 0]} />
+                  <Model3 />
                 </Float>
               </Suspense>
-              <OrbitControls minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={false} enableRotate={false} enablePan={false} />
               <Environment preset='warehouse' />
             </View>
           </Canvas>
