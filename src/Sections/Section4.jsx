@@ -43,25 +43,25 @@ export const Section4 = () => {
               <h1 className='available-in-text' >AVAILABLE IN</h1>
               <div className="logos">
                 <div className="logos-slide">
-                    <img src="./logo1.png" />
-                    <img src="./logo2.png" />
-                    <img src="./logo3.png" />
-                    <img src="./logo4.png" />
-                    <img src="./logo1.png" />
-                    <img src="./logo2.png" />
-                    <img src="./logo3.png" />
-                    <img src="./logo4.png" />
+                    <img src="./dw.png" />
+                    <img src="./dw2.png" />
+                    <img src="./dw.png" />
+                    <img src="./dw2.png" />
+                    <img src="./dw.png" />
+                    <img src="./dw2.png" />
+                    <img src="./dw.png" />
+                    <img src="./dw2.png" />
                 </div>
 
                 <div className="logos-slide">
-                    <img src="./logo1.png" />
-                    <img src="./logo2.png" />
-                    <img src="./logo3.png" />
-                    <img src="./logo4.png" />
-                    <img src="./logo1.png" />
-                    <img src="./logo2.png" />
-                    <img src="./logo3.png" />
-                    <img src="./logo4.png" />
+                    <img src="./dw.png" />
+                    <img src="./dw2.png" />
+                    <img src="./dw.png" />
+                    <img src="./dw2.png" />
+                    <img src="./dw.png" />
+                    <img src="./dw2.png" />
+                    <img src="./dw.png" />
+                    <img src="./dw2.png" />
                 </div>
               </div>
           </div>

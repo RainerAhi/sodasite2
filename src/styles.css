@@ -235,6 +235,11 @@ section {
   position: relative;
 }
 
+.navigation-logo {
+  position: relative;
+  height: 75%;
+}
+
 /* NAVIGATION BOTTOM */
 
 .navigation-bottom {
@@ -808,7 +813,7 @@ section {
 }
 
 .logos-slide img {
-  height: 1.75vw;
+  height: 2vw;
   margin: 0 7vw;
   opacity: 1;
 }
