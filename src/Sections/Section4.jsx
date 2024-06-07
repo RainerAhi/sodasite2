@@ -63,12 +63,24 @@ export const Section4 = () => {
             <AnimatePresence>
                 {hoveredContainer === 'mango' && (
                     <motion.img
-                        className='motion-image'
-                        src='./behind.png' // Replace with your image path
-                        initial={{ scale: 0, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        exit={{ scale: 0, opacity: 0 }}
-                        transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+                    className='motion-image-left'
+                    src='./ice.png' // Replace with your image path
+                    initial={{ x: '100%', scale: 0, opacity: 0 }}
+                    animate={{ x: '0%', scale: 1, opacity: 1 }}
+                    exit={{ x: '100%', scale: 0, opacity: 0 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+                    />
+                )}
+            </AnimatePresence>
+            <AnimatePresence>
+                {hoveredContainer === 'mango' && (
+                    <motion.img
+                    className='motion-image-right'
+                    src='./mang.png' // Replace with your image path
+                    initial={{ x: '-100%', scale: 0, opacity: 0 }}
+                    animate={{ x: '0%', scale: 1, opacity: 1 }}
+                    exit={{ x: '-100%', scale: 0, opacity: 0 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 20 }}
                     />
                 )}
             </AnimatePresence>
@@ -101,15 +113,27 @@ export const Section4 = () => {
           </Canvas>
         </div>
         <div className='four-container' >
+        <AnimatePresence>
+                {hoveredContainer === 'cherry' && (
+                    <motion.img
+                    className='motion-2-image-right'
+                    src='./ice.png' // Replace with your image path
+                    initial={{ x: '-100%', scale: 0, opacity: 0 }}
+                    animate={{ x: '0%', scale: 1, opacity: 1 }}
+                    exit={{ x: '-100%', scale: 0, opacity: 0 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+                    />
+                )}
+            </AnimatePresence>
             <AnimatePresence>
                 {hoveredContainer === 'cherry' && (
                     <motion.img
-                        className='motion-image'
-                        src='./behind.png' // Replace with your image path
-                        initial={{ scale: 0, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        exit={{ scale: 0, opacity: 0 }}
-                        transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+                    className='motion-2-image-left'
+                    src='./cherry.png' // Replace with your image path
+                    initial={{ x: '100%', scale: 0, opacity: 0 }}
+                    animate={{ x: '0%', scale: 1, opacity: 1 }}
+                    exit={{ x: '100%', scale: 0, opacity: 0 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 20 }}
                     />
                 )}
             </AnimatePresence>
