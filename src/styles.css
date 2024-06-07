@@ -687,7 +687,7 @@ section {
 
 .motion-image-left {
   position: absolute;
-  top: 0%;
+  top: 35%;
   left: 0%;
   width: 40%;
   z-index: 0;
@@ -695,7 +695,7 @@ section {
 
 .motion-image-right {
   position: absolute;
-  bottom: 15%;
+  top: 35%;
   right: 0;
   width: 35%;
   z-index: 0;
@@ -703,7 +703,7 @@ section {
 
 .motion-2-image-right {
   position: absolute;
-  top: 0%;
+  top: 35%;
   right: 5%;
   width: 35%;
   z-index: 0;
@@ -711,7 +711,7 @@ section {
 
 .motion-2-image-left {
   position: absolute;
-  bottom: 15%;
+  top: 35%;
   left: 5%;
   width: 35%;
   z-index: 0;
