@@ -661,10 +661,9 @@ section {
 
 .four-container {
   position: relative;
-  width: 25vw;
+  width: 50vw;
   height: 67.5vh;
   border-radius: 100px;
-  background-color: #f9f6e550;
   display: flex;
   align-items: center;
   justify-content: center;
