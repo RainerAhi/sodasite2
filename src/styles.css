@@ -76,17 +76,13 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 5vh;
 }
 
 .contact-form .form-group {
   margin-bottom: 2vh;
   width: 50vw;
   text-align: left;
-}
-
-.contact-form label {
-  display: block;
-  margin-bottom: 0.5rem;
 }
 
 .contact-form input,
@@ -139,6 +135,25 @@ section {
   cursor: pointer;
   border: none;
   padding: 0 1.5vw;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.25vw;
+  line-height: 115%;
+}
+
+/* CSS for placeholder text */
+.form-group input[type="text"]::placeholder,
+.form-group input[type="email"]::placeholder,
+.form-group textarea::placeholder {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.25vw;
+  line-height: 115%;
 }
 
 .description-contact {
@@ -717,6 +732,11 @@ section {
   z-index: 0;
 }
 
+.motion-image-inside {
+  position: relative;
+  width: 100%;
+}
+
 .four-container-bottom {
   position: absolute;
   bottom: 2vh;
@@ -942,14 +962,17 @@ html.lenis {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 4rem;
   width: 100vw;
   height: 100vh;
   z-index: 12;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  background-color: #f9f6e5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/newg2.png'); /* Adjust the path based on your directory structure */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   opacity: 1;
   transition: opacity 1s ease-in-out;
 }
@@ -968,29 +991,21 @@ html.lenis {
   }
 }
 
-.loading-screen__title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  font-size: 10rem;
-  text-transform: uppercase;
-  color: #1d1c1c;
-  margin: 0;
+.loading-screen-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.progress__container {
-  width: 100%;
-  height: 1rem;
-  background-color: white;
+.loading-logo {
   position: relative;
-  overflow: hidden;
-  border-radius: 4px;
+  height: 10vh;
+  margin-top: 0;
 }
 
-.progress__bar {
-  width: 0;
-  height: 100%;
-  background-color: #f9af42;
-  transition: width 0.5s ease-in-out;
+.soda-can {
+  margin-bottom: -40%;
 }
 
 

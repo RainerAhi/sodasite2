@@ -29,6 +29,11 @@ export const Section1 = () => {
         setShowOverlay(!showOverlay);
     };
 
+    const handleClick = (linkUrl) => {
+        // Open the specified webpage link in a new tab when carousel-content is clicked
+        window.open(linkUrl, '_blank');
+      };
+
     return (
         <section className="one">
             <div className={`navigation ${navScrolled ? "scrolled" : ""}`}>
@@ -36,24 +41,28 @@ export const Section1 = () => {
                     <motion.div
                         whileHover={{ y: -5 }}
                         transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                        onClick={() => handleClick('https://www.instagram.com/dialedweb')}
                     >
                         <i className="fa-brands navigation-icons fa-instagram"></i>
                     </motion.div>
                     <motion.div
                         whileHover={{ y: -5 }}
                         transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                        onClick={() => handleClick('https://www.youtube.com/channel/UC8-bljvEXqCTOF1-xdwFYtg')}
                     >
                         <i className="fa-brands navigation-icons fa-youtube"></i>
                     </motion.div>
                     <motion.div
                         whileHover={{ y: -5 }}
                         transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                        onClick={() => handleClick('https://www.instagram.com/dialedweb')}
                     >
                         <i className="fa-brands navigation-icons fa-tiktok"></i>
                     </motion.div>
                     <motion.div
                         whileHover={{ y: -5 }}
                         transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                        onClick={() => handleClick('mailto:support@dialedworldwide.com')}
                     >
                         <i className="fa-solid navigation-icons fa-envelope"></i>
                     </motion.div>
@@ -135,28 +144,16 @@ export const Section1 = () => {
                             <h1 className="title-back black">CONTACT</h1>
                             <form className="contact-form">
                                 <div className="form-group">
-                                    <label>
-                                        <p className="description-contact" >First Name</p>
-                                    </label>
-                                    <input type="text" name="firstName" />
+                                    <input type="text" name="firstName" placeholder="First Name"/>
                                 </div>
                                 <div className="form-group">
-                                    <label>
-                                        <p className="description-contact" >Last Name</p>
-                                    </label>
-                                    <input type="text" name="lastName" />
+                                    <input type="text" name="lastName" placeholder="Last Name"/>
                                 </div>
                                 <div className="form-group">
-                                    <label>
-                                        <p className="description-contact" >Email</p>
-                                    </label>
-                                    <input type="email" name="email" />
+                                    <input type="email" name="email" placeholder="Email"/>
                                 </div>
                                 <div className="form-group">
-                                    <label>
-                                        <p className="description-contact" >Message</p>
-                                    </label>
-                                    <textarea name="message"></textarea>
+                                    <textarea name="message" placeholder="Message"></textarea>
                                 </div>
                                 <div className="form-actions">
                                     <motion.button

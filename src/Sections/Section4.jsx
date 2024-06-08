@@ -59,45 +59,53 @@ export const Section4 = () => {
         </div>
       </div>
       <div className='four-experience'>
-        <div  className='four-container' >
-            <AnimatePresence>
-                {hoveredContainer === 'mango' && (
-                    <motion.img
-                    className='motion-image-left'
-                    src='./splashr3.png' // Replace with your image path
-                    initial={{ x: '100%', scale: 0, opacity: 0 }}
-                    animate={{ x: '0%', scale: 1, opacity: 1 }}
-                    exit={{ x: '100%', scale: 0, opacity: 0 }}
-                    transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-                    />
-                )}
-            </AnimatePresence>
-            <AnimatePresence>
-                {hoveredContainer === 'mango' && (
-                    <motion.img
-                    className='motion-image-right'
-                    src='./mangr.png' // Replace with your image path
-                    initial={{ x: '-100%', scale: 0, opacity: 0 }}
-                    animate={{ x: '0%', scale: 1, opacity: 1 }}
-                    exit={{ x: '-100%', scale: 0, opacity: 0 }}
-                    transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-                    />
-                )}
-            </AnimatePresence>
-            <div className='four-container-content' ref={ref} onMouseEnter={() => setHoveredContainer('mango')} onMouseLeave={() => setHoveredContainer(null)} >
-                <div className="four-container-bottom">
-                    <h1 className='four-container-text'>MANGO BLAST</h1>
-                    <motion.button
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-                        className='wave-button'
-                    >
-                        <h1 className='button-text'>ORDER NOW</h1>
-                        <div className='wave' />
-                    </motion.button>
-                </div>
+        <div className='four-container'>
+          <AnimatePresence>
+            {hoveredContainer === 'mango' && (
+              <motion.div
+                className='motion-image-left'
+                initial={{ x: '100%', scale: 0, opacity: 0 }}
+                animate={{ x: '0%', scale: 1, opacity: 1, y: [0, -10, 0] }}
+                exit={{ x: '100%', scale: 0, opacity: 0 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 20, y: { duration: 6, repeat: Infinity, repeatType: "loop", ease: "easeInOut" } }}
+              >
+                <motion.img
+                  src='./splashr3.png'
+                  className='motion-image-inside'
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
+          <AnimatePresence>
+            {hoveredContainer === 'mango' && (
+              <motion.div
+                className='motion-image-right'
+                initial={{ x: '-100%', scale: 0, opacity: 0 }}
+                animate={{ x: '0%', scale: 1, opacity: 1, y: [0, -10, 0] }}
+                exit={{ x: '-100%', scale: 0, opacity: 0 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 20, y: { duration: 6, repeat: Infinity, repeatType: "loop", ease: "easeInOut" } }}
+              >
+                <motion.img
+                  src='./mangr.png'
+                  className='motion-image-inside'
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
+          <div className='four-container-content' ref={ref} onMouseEnter={() => setHoveredContainer('mango')} onMouseLeave={() => setHoveredContainer(null)}>
+            <div className="four-container-bottom">
+              <h1 className='four-container-text'>MANGO BLAST</h1>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+                className='wave-button'
+              >
+                <h1 className='button-text'>ORDER NOW</h1>
+                <div className='wave' />
+              </motion.button>
             </div>
+          </div>
           <div ref={view1} className='view' style={{ height: '100%', width: '50vw' }} />
           <div className='mobile-scroll' />
           <Canvas eventSource={ref} className='canvas'>
@@ -111,45 +119,53 @@ export const Section4 = () => {
             </View>
           </Canvas>
         </div>
-        <div className='four-container' >
-        <AnimatePresence>
-                {hoveredContainer === 'cherry' && (
-                    <motion.img
-                    className='motion-2-image-right'
-                    src='./ice.png' // Replace with your image path
-                    initial={{ x: '-100%', scale: 0, opacity: 0 }}
-                    animate={{ x: '0%', scale: 1, opacity: 1 }}
-                    exit={{ x: '-100%', scale: 0, opacity: 0 }}
-                    transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-                    />
-                )}
-            </AnimatePresence>
-            <AnimatePresence>
-                {hoveredContainer === 'cherry' && (
-                    <motion.img
-                    className='motion-2-image-left'
-                    src='./cherryr.png' // Replace with your image path
-                    initial={{ x: '100%', scale: 0, opacity: 0 }}
-                    animate={{ x: '0%', scale: 1, opacity: 1 }}
-                    exit={{ x: '100%', scale: 0, opacity: 0 }}
-                    transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-                    />
-                )}
-            </AnimatePresence>
-            <div className='four-container-content' ref={ref2} onMouseEnter={() => setHoveredContainer('cherry')} onMouseLeave={() => setHoveredContainer(null)} >
-                <div className="four-container-bottom">
-                    <h1 className='four-container-text'>BLACK CHERRY</h1>
-                    <motion.button
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-                        className='wave-button'
-                    >
-                        <h1 className='button-text'>ORDER NOW</h1>
-                        <div className='wave' />
-                    </motion.button>
-                </div>
+        <div className='four-container'>
+          <AnimatePresence>
+            {hoveredContainer === 'cherry' && (
+              <motion.div
+                className='motion-2-image-right'
+                initial={{ x: '-100%', scale: 0, opacity: 0 }}
+                animate={{ x: '0%', scale: 1, opacity: 1, y: [0, -10, 0] }}
+                exit={{ x: '-100%', scale: 0, opacity: 0 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 20, y: { duration: 6, repeat: Infinity, repeatType: "loop", ease: "easeInOut" } }}
+              >
+                <motion.img
+                  src='./ice.png'
+                  className='motion-image-inside'
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
+          <AnimatePresence>
+            {hoveredContainer === 'cherry' && (
+              <motion.div
+                className='motion-2-image-left'
+                initial={{ x: '100%', scale: 0, opacity: 0 }}
+                animate={{ x: '0%', scale: 1, opacity: 1, y: [0, -10, 0] }}
+                exit={{ x: '100%', scale: 0, opacity: 0 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 20, y: { duration: 6, repeat: Infinity, repeatType: "loop", ease: "easeInOut" } }}
+              >
+                <motion.img
+                  src='./cherryr.png'
+                  className='motion-image-inside'
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
+          <div className='four-container-content' ref={ref2} onMouseEnter={() => setHoveredContainer('cherry')} onMouseLeave={() => setHoveredContainer(null)}>
+            <div className="four-container-bottom">
+              <h1 className='four-container-text'>BLACK CHERRY</h1>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+                className='wave-button'
+              >
+                <h1 className='button-text'>ORDER NOW</h1>
+                <div className='wave' />
+              </motion.button>
             </div>
+          </div>
           <div ref={view2} className='view' style={{ height: '100%', width: '50vw' }} />
           <div className='mobile-scroll' />
           <Canvas eventSource={ref2} className='canvas'>
