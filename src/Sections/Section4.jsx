@@ -44,6 +44,8 @@ export const Section4 = () => {
               <img src='./dw2.png' />
               <img src='./dw.png' />
               <img src='./dw2.png' />
+              <img src='./dw.png' />
+              <img src='./dw2.png' />
             </div>
             <div className='logos-slide'>
               <img src='./dw.png' />
@@ -54,6 +56,9 @@ export const Section4 = () => {
               <img src='./dw2.png' />
               <img src='./dw.png' />
               <img src='./dw2.png' />
+              <img src='./dw.png' />
+              <img src='./dw2.png' />
+              <img src='./dw.png' />
             </div>
           </div>
         </div>
