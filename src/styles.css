@@ -81,8 +81,8 @@ section {
 
 .contact-form .form-group {
   margin-bottom: 2vh;
-  width: 50vw;
-  text-align: left;
+  width: 25vw;
+  text-align: center;
 }
 
 .contact-form input,
@@ -93,6 +93,7 @@ section {
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: #f9f6e5;
+  text-align: center;
 }
 
 .contact-form textarea {
