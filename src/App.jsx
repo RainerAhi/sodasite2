@@ -72,7 +72,7 @@ const LoadingScreen = () => {
             </g>
           </svg>
         </div>
-        <img src="./navlogo.png" className="loading-logo" />
+        <img src="./logonew.png" className="loading-logo" />
       </div>
     </div>
   );

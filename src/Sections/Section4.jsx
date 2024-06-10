@@ -75,7 +75,7 @@ export const Section4 = () => {
                 transition={{ type: 'spring', stiffness: 400, damping: 20, y: { duration: 6, repeat: Infinity, repeatType: "loop", ease: "easeInOut" } }}
               >
                 <motion.img
-                  src='./splashr3.png'
+                  src='./w2.png'
                   className='motion-image-inside'
                 />
               </motion.div>
@@ -91,7 +91,7 @@ export const Section4 = () => {
                 transition={{ type: 'spring', stiffness: 400, damping: 20, y: { duration: 6, repeat: Infinity, repeatType: "loop", ease: "easeInOut" } }}
               >
                 <motion.img
-                  src='./mangr.png'
+                  src='./m2.png'
                   className='motion-image-inside'
                 />
               </motion.div>
@@ -135,7 +135,7 @@ export const Section4 = () => {
                 transition={{ type: 'spring', stiffness: 400, damping: 20, y: { duration: 6, repeat: Infinity, repeatType: "loop", ease: "easeInOut" } }}
               >
                 <motion.img
-                  src='./ice.png'
+                  src='./i.png'
                   className='motion-image-inside'
                 />
               </motion.div>
@@ -151,7 +151,7 @@ export const Section4 = () => {
                 transition={{ type: 'spring', stiffness: 400, damping: 20, y: { duration: 6, repeat: Infinity, repeatType: "loop", ease: "easeInOut" } }}
               >
                 <motion.img
-                  src='./cherryr.png'
+                  src='./c.png'
                   className='motion-image-inside'
                 />
               </motion.div>
