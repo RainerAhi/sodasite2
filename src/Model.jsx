@@ -103,8 +103,8 @@ export default function Model({ rotate, setRotate, ...props }) {
 
   const { nodes, materials } = useGLTF('/desktop2.glb')
   return (
-    <group ref={model} {...props} dispose={null}>
-      <mesh geometry={nodes.can.geometry} material={materials.can} />
+    <group {...props} dispose={null}>
+      <mesh ref={model} geometry={nodes.can.geometry} material={materials.can} />
     </group>
   )
 }
