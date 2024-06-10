@@ -101,13 +101,10 @@ export default function Model({ rotate, setRotate, ...props }) {
     });
   }, []);
 
-  const desktopModelPath = "./desktop.glb";
-  const mobileModelPath = "./mobile.glb";
-
   const { nodes, materials } = useGLTF('/desktop2.glb')
   return (
     <group ref={model} {...props} dispose={null}>
-      <mesh castShadow receiveShadow geometry={nodes.can.geometry} material={materials.can} />
+      <mesh geometry={nodes.can.geometry} material={materials.can} />
     </group>
   )
 }

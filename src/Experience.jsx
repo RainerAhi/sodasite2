@@ -12,41 +12,15 @@ import Model from './Model'
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Experience({ rotate, setRotate }) {
-
-  const { camera, scene } = useThree()
-
-  const controlsRef = useRef()
-
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 767);
-    };
-
-    // Add event listener to listen for window resize
-    window.addEventListener('resize', handleResize);
-
-    // Initial check for mobile device on component mount
-    handleResize();
-
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  console.log(isMobile)
   
 
   return (
     <>
       <Suspense fallback={ <Loading /> } >
         <Float speed={ 2 } >
-          <Model rotate={rotate} setRotate={setRotate} position={ [ 0, 0, 0 ] } />
+          <Model rotate={rotate} setRotate={setRotate}/>
         </Float>  
       </Suspense>
-      <OrbitControls ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />
       <Environment preset='warehouse' />
       </>
   )
