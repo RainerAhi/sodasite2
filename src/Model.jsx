@@ -12,18 +12,6 @@ export default function Model({ rotate, setRotate, ...props }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 800);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  useEffect(() => {
     if (rotate) {
       gsap.to(model.current.rotation, {
         y: model.current.rotation.y + Math.PI * 2,

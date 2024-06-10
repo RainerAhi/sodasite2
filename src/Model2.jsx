@@ -86,8 +86,8 @@ export default function Model2({props }) {
 
   return (
     <>
-        <OrbitControls target={ [ 5, 0, 0 ] } ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />
-        <group scale={ 0.4 } {...props} dispose={null} ref={model2}>
+        <OrbitControls target={ [ isMobile ? 0 : 5, 0, 0 ] } ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />
+        <group scale={ isMobile ? 0.6 : 0.4 } {...props} dispose={null} ref={model2}>
             <mesh castShadow receiveShadow geometry={nodes.can.geometry} material={materials.can} />
         </group>
     </>
