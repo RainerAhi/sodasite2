@@ -62,8 +62,24 @@ export const Section2 = () => {
         }, 400); // Reset the scale state after 2 seconds
     };
 
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed
+      };
+  
+      handleResize(); // Initial check
+      window.addEventListener('resize', handleResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+
     return (
         <section className="section two">
+            <div className="mobile-scroll"/>
             <div className="experience">
                 <CanvasContainer rotate={rotate} setRotate={setRotate} />
             </div>
@@ -87,6 +103,19 @@ export const Section2 = () => {
                 transition={{ type: "spring", duration: 2 }}
             >
             </motion.div>
+
+            {isMobile && (
+                    <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    className="wave-button-mobile"
+                    onClick={handleRotate}
+                >
+                    <h1 className="button-text">ROTATE CAN</h1>
+                    <div className='wave' />
+                </motion.button>
+                )}
 
             <div className="two-right">
                 <div className={`drink-introduction ${isVisibleThree ? 'visible' : ''}`} ref={threeRef}>

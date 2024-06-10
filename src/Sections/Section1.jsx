@@ -34,9 +34,35 @@ export const Section1 = () => {
         window.open(linkUrl, '_blank');
       };
 
+      const [isMobile, setIsMobile] = useState(false);
+
+      useEffect(() => {
+        const handleResize = () => {
+          setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed
+        };
+    
+        handleResize(); // Initial check
+        window.addEventListener('resize', handleResize);
+    
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+      }, []);
+
     return (
         <section className="one">
+            <div className="mobile-scroll"/>
             <div className={`navigation ${navScrolled ? "scrolled" : ""}`}>
+                {isMobile && (
+                <motion.div
+                    className="buy"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                    <i className="fa-solid fa-cart-shopping"></i>
+                </motion.div>
+                )}
                 <div className="navigation-right">
                     <motion.div
                         whileHover={{ y: -5 }}
@@ -70,7 +96,7 @@ export const Section1 = () => {
                 <img src="./logonew.png" className="navigation-logo" />
                 <div className="navigation-left">
                     <motion.div
-                        className="buy"
+                        className="buy buy-desktop"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ type: "spring", stiffness: 400, damping: 10 }}
