@@ -40,9 +40,9 @@ export default function Model3({props }) {
         z: 0,
         y: -0.5,
         scrollTrigger: {
-          trigger: ".four",
-          start: "top 70%",
-          end: "top top",
+          trigger: ".container-two",
+          start: "top bottom",
+          end: "bottom 90%",
           scrub: true,
           immediateRender: false,
         },
@@ -53,9 +53,9 @@ export default function Model3({props }) {
         y: 0.6,
         z: 0.6,
         scrollTrigger: {
-          trigger: ".four",
-          start: "top 70%",
-          end: "top top",
+          trigger: ".container-two",
+          start: "top bottom",
+          end: "bottom 90%",
           scrub: true,
           immediateRender: false,
         },
@@ -64,9 +64,9 @@ export default function Model3({props }) {
       .to(model2.current.rotation, {
         y: Math.PI * -2,
         scrollTrigger: {
-          trigger: ".four",
-          start: "top 70%",
-          end: "top top",
+          trigger: ".container-two",
+          start: "top bottom",
+          end: "bottom 90%",
           scrub: true,
           immediateRender: false,
         },

@@ -638,7 +638,7 @@ section {
   margin-top: 0;
 }
 
-/* SECTION SIX */
+/* SECTION FOUR */
 
 .four {
   display: flex;
@@ -755,6 +755,8 @@ section {
   position: absolute;
   top: 0;
   z-index: 12;
+  width: 50vw;
+  height: 100%;
 }
 
 .canvas {
@@ -1220,6 +1222,295 @@ html.lenis {
   bottom: 10vh;
   z-index: 25;
 }
+
+/* SECTION THREE */
+
+.three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f6e5;
+}
+
+.three-content {
+  width: 100%;
+  height: 100vh;
+  background-color: #f9f6e575;
+  backdrop-filter: blur(16px);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.three-title {
+  font-family: 'ROSEFORD DEMO', sans-serif;
+  font-size: 1.4rem;
+  text-align: center;
+  color: #1d1c1c;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.three-title.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.three-description {
+  font-family: 'Freudian One', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.three-description.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.three-bottom-texts {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 1vh;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.three-bottom-texts.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.three-bottom-left {
+  width: 100%;
+}
+
+.three-bottom-right {
+  width: 100%;
+}
+
+.three-small-description {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+  margin-top: 0;
+}
+
+/* SECTION FOUR */
+
+.four {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  position: relative;
+}
+
+.four-content {
+  width: 100%;
+  height: 175vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh;
+}
+
+.four-experience {
+  width: 100%;
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+.four-container {
+  position: relative;
+  width: 80%;
+  height: 60vh;
+  border-radius: 100px;
+  background-color: #f9f6e550;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view {
+  width: 100%;
+  height: 60vh;
+}
+
+.four-container-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 70%;
+  margin-left: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 20;
+}
+
+.motion-image-left {
+  position: absolute;
+  top: 35%;
+  left: 0%;
+  width: 40%;
+  z-index: 0;
+}
+
+.motion-image-right {
+  position: absolute;
+  top: 35%;
+  right: 0;
+  width: 35%;
+  z-index: 0;
+}
+
+.motion-2-image-right {
+  position: absolute;
+  top: 35%;
+  right: 5%;
+  width: 35%;
+  z-index: 0;
+}
+
+.motion-2-image-left {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  width: 35%;
+  z-index: 0;
+}
+
+.motion-image-inside {
+  position: relative;
+  width: 100%;
+}
+
+.four-container-bottom {
+  position: absolute;
+  bottom: 2vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.four-container-text {
+  font-family: 'Freudian One', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.view {
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 12;
+}
+
+.canvas {
+  position: fixed !important;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+}
+
+.four-title {
+  font-family: 'Freudian One', sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 85%;
+  color: #f9f6e5;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+}
+
+/* MOVING LOGOS */
+
+.available-in {
+  width: 100%;
+  height: 15vh;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.available-in-text {
+  font-family: 'Freudian One', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  color: #f9f6e5;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 1vh 0;
+  background: transparent;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 0;
+  background-color: #f9f6e550;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 15vw;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 28.1s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 4vw;
+  margin: 0 7vw;
+  opacity: 1;
+}
+
+
 
 
 }

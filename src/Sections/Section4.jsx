@@ -64,7 +64,7 @@ export const Section4 = () => {
         </div>
       </div>
       <div className='four-experience'>
-        <div className='four-container'>
+        <div className='four-container container-one'>
           <AnimatePresence>
             {hoveredContainer === 'mango' && (
               <motion.div
@@ -111,7 +111,7 @@ export const Section4 = () => {
               </motion.button>
             </div>
           </div>
-          <div ref={view1} className='view' style={{ height: '100%', width: '50vw' }} />
+          <div ref={view1} className='view' />
           <div className='mobile-scroll' />
           <Canvas eventSource={ref} className='canvas'>
             <View track={view1}>
@@ -124,7 +124,7 @@ export const Section4 = () => {
             </View>
           </Canvas>
         </div>
-        <div className='four-container'>
+        <div className='four-container container-two'>
           <AnimatePresence>
             {hoveredContainer === 'cherry' && (
               <motion.div
@@ -171,7 +171,7 @@ export const Section4 = () => {
               </motion.button>
             </div>
           </div>
-          <div ref={view2} className='view' style={{ height: '100%', width: '50vw' }} />
+          <div ref={view2} className='view' />
           <div className='mobile-scroll' />
           <Canvas eventSource={ref2} className='canvas'>
             <View track={view2}>
