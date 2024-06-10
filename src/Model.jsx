@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useThree } from "@react-three/fiber";
 import { useLayoutEffect, useState } from "react";
 import SplitType from 'split-type'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 
 export default function Model({ rotate, setRotate, ...props }) {
   const { camera, scene } = useThree();
@@ -104,7 +105,7 @@ export default function Model({ rotate, setRotate, ...props }) {
   const { nodes, materials } = useGLTF('/desktop2.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh ref={model} geometry={nodes.can.geometry} material={materials.can} />
+      <mesh scale={ isMobile ? 0.8 : 1 } ref={model} geometry={nodes.can.geometry} material={materials.can} />
     </group>
   )
 }

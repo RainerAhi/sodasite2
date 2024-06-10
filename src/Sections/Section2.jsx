@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState, Suspense } from "react";
-import CanvasContainer from "../CanvasContainer";
 import Model from '../Model'
 import { motion } from "framer-motion";
 import { Canvas } from '@react-three/fiber'
