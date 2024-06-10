@@ -38,7 +38,7 @@ export default function Model3({props }) {
       .to(controlsRef.current.target, {
         x: 0,
         z: 0,
-        y: -0.5,
+        y: isMobile ? -1.25 : -0.5,
         scrollTrigger: {
           trigger: ".container-two",
           start: "top bottom",
@@ -49,9 +49,9 @@ export default function Model3({props }) {
       })
 
       .to(model2.current.scale, {
-        x: 0.6,
-        y: 0.6,
-        z: 0.6,
+        x: isMobile ? 0.45 : 0.6,
+        y: isMobile ? 0.45 : 0.6,
+        z: isMobile ? 0.45 : 0.6,
         scrollTrigger: {
           trigger: ".container-two",
           start: "top bottom",
@@ -86,8 +86,8 @@ export default function Model3({props }) {
 
   return (
     <>
-        <OrbitControls target={ [ isMobile ? 0 : -5, 0, 0 ] } ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />
-        <group scale={ isMobile ? 0.6 : 0.4 } {...props} dispose={null} ref={model2}>
+        <OrbitControls target={ [ -5, 0, 0 ] } ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />
+        <group scale={ 0.4 } {...props} dispose={null} ref={model2}>
             <mesh castShadow receiveShadow geometry={nodes.can.geometry} material={materials.can} />
         </group>
     </>

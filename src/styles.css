@@ -1043,6 +1043,7 @@ html.lenis {
   border: none;
   position: relative;
   overflow: hidden;
+  color: #1d1c1c;
 }
 
 .fa-bolt {
@@ -1230,6 +1231,7 @@ html.lenis {
   overflow: hidden;
   bottom: 10vh;
   z-index: 25;
+  color: #1d1c1c;
 }
 
 /* SECTION THREE */
@@ -1328,7 +1330,7 @@ html.lenis {
 
 .four-content {
   width: 100%;
-  height: 175vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1337,23 +1339,23 @@ html.lenis {
 
 .four-experience {
   width: 100%;
-  height: 150vh;
+  height: 80vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   position: absolute;
   top: 0;
   left: 0;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 10vh;
+  margin-top: 5vh;
   margin-bottom: 10vh;
 }
 
 .four-container {
   position: relative;
-  width: 80%;
-  height: 60vh;
-  border-radius: 100px;
+  width: 40%;
+  height: 45vh;
+  border-radius: 50px;
   background-color: #f9f6e550;
   display: flex;
   align-items: center;
@@ -1519,6 +1521,122 @@ html.lenis {
   opacity: 1;
 }
 
+/* CONTACT OVERLAY */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f9f6e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.overlay-content {
+  background-color: #f9f6e5;
+  padding: 2vw;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5vh;
+}
+
+.contact-form .form-group {
+  margin-bottom: 2vh;
+  width: 75vw;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5vw;
+  margin-bottom: 1vh;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f6e5;
+  text-align: left;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-actions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-actions button[type="submit"] {
+  height: 2.5rem;
+  width: fit-content;
+  border-radius: 150px;
+  background-color: #7ecf86;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  padding: 0 3vw;
+  color: #1d1c1c;
+}
+
+.form-actions button[type="button"] {
+  height: 2.5rem;
+  width: fit-content;
+  border-radius: 150px;
+  background-color: #7ecf86;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  padding: 0 3vw;
+  color: #1d1c1c;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 150%;
+}
+
+/* CSS for placeholder text */
+.form-group input[type="text"]::placeholder,
+.form-group input[type="email"]::placeholder,
+.form-group textarea::placeholder {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 150%;
+}
+
+.description-contact {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 150%;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
 
 
 
@@ -1573,6 +1691,17 @@ html.lenis {
 
 .soda-can {
   margin-bottom: -40%;
+}
+
+
+/* COLORS */
+
+.white {
+  color: #f9f6e5;
+}
+
+.black {
+  color: #1d1c1c;
 }
 
 
