@@ -1,6 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, Suspense } from "react";
 import CanvasContainer from "../CanvasContainer";
+import Model from '../Model'
 import { motion } from "framer-motion";
+import { Canvas } from '@react-three/fiber'
+import { Environment, Float } from '@react-three/drei'
 
 export const Section2 = () => {
     const [isVisibleOne, setIsVisibleOne] = useState(false);
@@ -81,7 +84,14 @@ export const Section2 = () => {
         <section className="section two">
             <div className="mobile-scroll"/>
             <div className="experience">
-                <CanvasContainer rotate={rotate} setRotate={setRotate} />
+                <Canvas shadows camera={{ position: [0, 0, 10], fov: 35 }} >
+                    <Suspense>
+                        <Float fallback >
+                            <Model rotate={rotate} setRotate={setRotate} />
+                        </Float>
+                        <Environment preset='warehouse' />
+                    </Suspense>
+                </Canvas>
             </div>
 
             <div className="two-left">

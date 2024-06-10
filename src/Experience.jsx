@@ -6,7 +6,6 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useThree } from "@react-three/fiber";
 import * as THREE from "three"
-import CustomEffects from './Effects'
 import { Loading } from './Loading'
 import Model from './Model'
 gsap.registerPlugin(ScrollTrigger)
