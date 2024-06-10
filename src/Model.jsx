@@ -12,6 +12,17 @@ export default function Model({ rotate, setRotate, ...props }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
 
   useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 800);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
     if (rotate) {
       gsap.to(model.current.rotation, {
         y: model.current.rotation.y + Math.PI * 2,
@@ -55,18 +66,6 @@ export default function Model({ rotate, setRotate, ...props }) {
       let { isMobile, isDesktop } = context.conditions;
 
       tl
-      .to(model.current.scale, {
-        x: isMobile ? 0.35 : 0.45,
-        y: isMobile ? 0.35 : 0.45,
-        z: isMobile ? 0.35 : 0.45,
-        scrollTrigger: {
-          trigger: ".one",
-          start: "top bottom",
-          end: "top top",
-          scrub: true,
-          immediateRender: false,
-        },
-      })
         .to(".one-title, .one-border", {
           opacity: 0,
           yPercent: '-50',
