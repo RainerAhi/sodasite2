@@ -1,15 +1,26 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useLayoutEffect, useState } from "react";
 import { useGLTF } from "@react-three/drei";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useThree } from "@react-three/fiber";
-import { useLayoutEffect, useState } from "react";
-import SplitType from 'split-type'
+import SplitType from 'split-type';
 
 export default function Model({ rotate, setRotate, ...props }) {
   const { camera, scene } = useThree();
   const model = useRef();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 800);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     if (rotate) {
@@ -21,32 +32,29 @@ export default function Model({ rotate, setRotate, ...props }) {
     }
   }, [rotate, setRotate]);
 
-  const tl = gsap.timeline();
-  let mm = gsap.matchMedia();
-
   useLayoutEffect(() => {
-
     const cont = document.querySelector(".carousel");
-    const splitTypes = document.querySelectorAll('.reveal-type')
+    const splitTypes = document.querySelectorAll('.reveal-type');
 
-    splitTypes.forEach((char,i) => {
-
-      const bg = char.dataset.bgColor
-      const fg = char.dataset.fgColor
-
-      const text = new SplitType(char, { types: 'chars'})
+    splitTypes.forEach((char) => {
+      const bg = char.dataset.bgColor;
+      const fg = char.dataset.fgColor;
+      const text = new SplitType(char, { types: 'chars' });
 
       gsap.from(text.chars, {
-              scrollTrigger: {
-                  trigger: char,
-                  start: 'top 80%',
-                  end: 'bottom 60%',
-                  scrub: true,
-              },
-              opacity: 0.2,
-              stagger: 0.1,
-      })
-  })
+        scrollTrigger: {
+          trigger: char,
+          start: 'top 80%',
+          end: 'bottom 60%',
+          scrub: true,
+        },
+        opacity: 0.2,
+        stagger: 0.1,
+      });
+    });
+
+    const tl = gsap.timeline();
+    let mm = gsap.matchMedia();
 
     mm.add({
       isDesktop: "(min-width: 800px)",
@@ -96,11 +104,12 @@ export default function Model({ rotate, setRotate, ...props }) {
   const { nodes, materials } = useGLTF(isMobile ? mobileModelPath : desktopModelPath);
 
   return (
-    <group scale={ isMobile ? 0.35 : 0.45 } {...props} dispose={null} ref={model}>
+    <group scale={isMobile ? 0.35 : 0.45} {...props} dispose={null} ref={model}>
       <mesh castShadow receiveShadow geometry={nodes.can.geometry} material={materials.can} />
     </group>
   );
 }
 
-useGLTF.preload('./desktop.glb')
+useGLTF.preload('./desktop.glb');
 useGLTF.preload("./mobile.glb");
+
