@@ -102,12 +102,16 @@ export default function Model({ rotate, setRotate, ...props }) {
     });
   }, []);
 
-  const { nodes, materials } = useGLTF('/desktop2.glb')
+  const desktopModel = useGLTF('/desktop2.glb');
+  const mobileModel = useGLTF('/mobile2.glb');
+  const modelData = isMobile ? mobileModel : desktopModel;
+
   return (
     <group {...props} dispose={null}>
-      <mesh scale={ isMobile ? 0.8 : 1 } ref={model} geometry={nodes.can.geometry} material={materials.can} />
+      <mesh scale={isMobile ? 0.8 : 1} ref={model} geometry={modelData.nodes.can.geometry} material={modelData.materials.can} />
     </group>
-  )
+  );
 }
 
-useGLTF.preload('/desktop2.glb')
+useGLTF.preload('/desktop2.glb');
+useGLTF.preload('/mobile2.glb');

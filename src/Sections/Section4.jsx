@@ -28,37 +28,61 @@ export const Section4 = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const scrollers = document.querySelectorAll(".scroller");
+
+    // If a user hasn't opted in for reduced motion, then we add the animation
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      addAnimation();
+    }
+
+    function addAnimation() {
+      scrollers.forEach((scroller) => {
+        // add data-animated="true" to every `.scroller` on the page
+        scroller.setAttribute("data-animated", true);
+
+        // Make an array from the elements within `.scroller-inner`
+        const scrollerInner = scroller.querySelector(".scroller__inner");
+        const scrollerContent = Array.from(scrollerInner.children);
+
+        // For each item in the array, clone it
+        // add aria-hidden to it
+        // add it into the `.scroller-inner`
+        scrollerContent.forEach((item) => {
+          const duplicatedItem = item.cloneNode(true);
+          duplicatedItem.setAttribute("aria-hidden", true);
+          scrollerInner.appendChild(duplicatedItem);
+        });
+      });
+    }
+  }, []);
+
   return (
     <section className='four'>
       <div className='four-content'>
         <h1 className='four-title'>PRODUCTS</h1>
         <div className='available-in'>
           <h1 className='available-in-text'>AVAILABLE AT</h1>
-          <div className='logos'>
-            <div className='logos-slide'>
-              <img src='./dw.png' />
-              <img src='./dw2.png' />
-              <img src='./dw.png' />
-              <img src='./dw2.png' />
-              <img src='./dw.png' />
-              <img src='./dw2.png' />
-              <img src='./dw.png' />
-              <img src='./dw2.png' />
-              <img src='./dw.png' />
-              <img src='./dw2.png' />
-            </div>
-            <div className='logos-slide'>
-              <img src='./dw.png' />
-              <img src='./dw2.png' />
-              <img src='./dw.png' />
-              <img src='./dw2.png' />
-              <img src='./dw.png' />
-              <img src='./dw2.png' />
-              <img src='./dw.png' />
-              <img src='./dw2.png' />
-              <img src='./dw.png' />
-              <img src='./dw2.png' />
-              <img src='./dw.png' />
+          <div className='scroller' data-direction="left" data-speed="slow" >
+            <div className="scroller__inner">
+              <img src="av2.jpg" alt="" />
+              <img src="av.jpg" alt="" />
+              <img src="av.jpg" alt="" />
+              <img src="av.jpg" alt="" />
+              <img src="av.jpg" alt="" />
+              <img src="av.jpg" alt="" />
+              <img src="av2.jpg" alt="" />
+              <img src="av.jpg" alt="" />
+              <img src="av.jpg" alt="" />
+              <img src="av.jpg" alt="" />
+              <img src="av.jpg" alt="" />
+              <img src="av.jpg" alt="" />
+              <img src="av2.jpg" alt="" />
+              <img src="av.jpg" alt="" />
+              <img src="av.jpg" alt="" />
+              <img src="av.jpg" alt="" />
+              <img src="av.jpg" alt="" />
+              <img src="av.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -75,7 +99,7 @@ export const Section4 = () => {
                 transition={{ type: 'spring', stiffness: 400, damping: 20, y: { duration: 6, repeat: Infinity, repeatType: "loop", ease: "easeInOut" } }}
               >
                 <motion.img
-                  src='./w2.png'
+                  src='./splashr.png'
                   className='motion-image-inside'
                 />
               </motion.div>
@@ -91,7 +115,7 @@ export const Section4 = () => {
                 transition={{ type: 'spring', stiffness: 400, damping: 20, y: { duration: 6, repeat: Infinity, repeatType: "loop", ease: "easeInOut" } }}
               >
                 <motion.img
-                  src='./m2.png'
+                  src='./mangr.png'
                   className='motion-image-inside'
                 />
               </motion.div>
@@ -135,7 +159,7 @@ export const Section4 = () => {
                 transition={{ type: 'spring', stiffness: 400, damping: 20, y: { duration: 6, repeat: Infinity, repeatType: "loop", ease: "easeInOut" } }}
               >
                 <motion.img
-                  src='./i.png'
+                  src='./ice.png'
                   className='motion-image-inside'
                 />
               </motion.div>
@@ -151,7 +175,7 @@ export const Section4 = () => {
                 transition={{ type: 'spring', stiffness: 400, damping: 20, y: { duration: 6, repeat: Infinity, repeatType: "loop", ease: "easeInOut" } }}
               >
                 <motion.img
-                  src='./c.png'
+                  src='./cherryr.png'
                   className='motion-image-inside'
                 />
               </motion.div>

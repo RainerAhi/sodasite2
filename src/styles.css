@@ -650,7 +650,7 @@ section {
 
 .four-content {
   width: 100%;
-  height: 110vh;
+  height: 120vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -819,11 +819,15 @@ section {
   top: 50%;
 }
 
+.wave-button-mobile:hover .wave {
+  top: 50%;
+}
+
 /* MOVING LOGOS */
 
 .available-in {
   width: 100%;
-  height: 25vh;
+  height: 30vh;
   position: absolute;
   bottom: 0;
   display: flex;
@@ -839,44 +843,66 @@ section {
   color: #f9f6e5;
 }
 
-@keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
+/* NEW */
+
+.scroller {
+  width: 100%;
+  height: fit-content;
 }
 
-.logos {
-  overflow: hidden;
-  padding: 1vh 0;
-  background: transparent;
-  white-space: nowrap;
-  position: absolute;
-  bottom: 0;
-  background-color: #f9f6e550;
-}
-
-.logos:before,
-.logos:after {
-  position: absolute;
-  top: 0;
-  width: 15vw;
+.scroller__inner {
+  padding-block: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
   height: 100%;
-  content: "";
-  z-index: 2;
 }
 
-.logos-slide {
-  display: inline-block;
-  animation: 28.1s slide infinite linear;
+.scroller__inner img {
+  height: 6vw;
+  width: 6vw;
+  position: relative;
 }
 
-.logos-slide img {
-  height: 4vw;
-  margin: 0 7vw;
-  opacity: 1;
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 60s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
 }
 
 
@@ -1377,7 +1403,7 @@ html.lenis {
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 20;
+  z-index: 22;
 }
 
 .motion-image-left {
@@ -1465,12 +1491,18 @@ html.lenis {
 
 .available-in {
   width: 100%;
-  height: 15vh;
+  height: 20vh;
   position: absolute;
   bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.scroller__inner img {
+  height: 12vw;
+  width: 12vw;
+  position: relative;
 }
 
 .available-in-text {
