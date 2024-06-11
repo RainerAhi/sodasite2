@@ -55,7 +55,7 @@ const LoadingScreen = () => {
         <div className="soda-can">
           <svg
             width="20vw" // Set a fixed width
-            height="75vh" // Set a fixed height
+            height="fit-content" // Set a fixed height
             viewBox="0 0 100 125"
             xmlns="http://www.w3.org/2000/svg"
             className="soda-can-svg"
