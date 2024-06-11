@@ -761,8 +761,8 @@ section {
 
 .canvas {
   position: fixed !important;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   z-index: 3;
 }
 
