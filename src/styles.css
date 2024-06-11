@@ -954,6 +954,62 @@ html.lenis {
   pointer-events: none;
 }
 
+/* 
+LOADING SCREEN */
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(187,127,120,255);
+  background-image: url('/newg2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.loading-screen--hidden {
+  animation: fade-out 0.5s ease-in-out forwards 1s;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loading-screen-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-logo {
+  position: relative;
+  height: 10vh;
+  margin-top: 0;
+}
+
+.soda-can {
+  margin-bottom: -40%;
+}
+
+/* MOBILE */
+
 @media (max-width: 768px) {
 
   .experience {
@@ -1669,11 +1725,8 @@ html.lenis {
   margin-top: 0;
 }
 
-
-
-
-}
-
+/* 
+LOADING SCREEN */
 
 .loading-screen {
   position: fixed;
@@ -1681,12 +1734,13 @@ html.lenis {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 30;
+  z-index: 50;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('/newg2.png'); /* Adjust the path based on your directory structure */
+  background-color: rgba(187,127,120,255);
+  background-image: url('/newg2.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1722,8 +1776,14 @@ html.lenis {
 }
 
 .soda-can {
-  margin-bottom: -40%;
+  margin-bottom: -50%;
 }
+
+
+
+
+}
+
 
 
 /* COLORS */
