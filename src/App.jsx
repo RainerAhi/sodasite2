@@ -48,10 +48,10 @@ const LoadingScreen = ({ onLoaded }) => {
   const liquidYPosition = 91.4621386 - currentLiquidHeight;
 
   useEffect(() => {
-    if (!active) {
+    if (progress === 100) {
       onLoaded();
     }
-  }, [active, onLoaded]);
+  }, [progress, onLoaded]);
 
   return (
     <div className={`loading-screen ${active ? '' : 'loading-screen--hidden'}`}>
@@ -117,10 +117,12 @@ function App() {
   }, []);
 
   const handleLoaded = () => {
-    if (lenis) {
-      lenis.start();
-    }
-    document.body.style.overflow = 'auto';
+    setTimeout(() => {
+      if (lenis) {
+        lenis.start();
+      }
+      document.body.style.overflow = 'auto';
+    }, 1000); // Delay for 1 second
   };
 
   useEffect(() => {
