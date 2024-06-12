@@ -139,11 +139,7 @@ export const Section4 = () => {
           <div className='mobile-scroll' />
           <Canvas eventSource={ref} className='canvas'>
             <View track={view1}>
-              <Suspense fallback={<Loading />}>
-                <Float speed={2}>
                   <Model2 position={[0, 0, 0]} />
-                </Float>
-              </Suspense>
               <Environment preset='warehouse' />
             </View>
           </Canvas>
