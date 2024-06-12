@@ -35,19 +35,6 @@ export default function Model2({props }) {
 
       tl
 
-      .to(controlsRef.current.target, {
-        x: 0,
-        z: 0,
-        y: isMobile ? -1.25 : -0.5,
-        scrollTrigger: {
-          trigger: ".container-one",
-          start: "top bottom",
-          end: "bottom 90%",
-          scrub: true,
-          immediateRender: false,
-        },
-      })
-
       .to(model2.current.scale, {
         x: isMobile ? 0.45 : 0.6,
         y: isMobile ? 0.45 : 0.6,
@@ -86,7 +73,6 @@ export default function Model2({props }) {
 
   return (
     <>
-        <OrbitControls target={ [ 5, 0, 0 ] } ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />
         <group scale={ 0.4 } {...props} dispose={null} ref={model2}>
             <mesh castShadow receiveShadow geometry={nodes.can.geometry} material={materials.can} />
         </group>

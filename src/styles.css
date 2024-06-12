@@ -759,7 +759,7 @@ section {
   position: absolute;
   top: 0;
   z-index: 12;
-  width: 100%;
+  width: 50vw;
   height: 100%;
 }
 
