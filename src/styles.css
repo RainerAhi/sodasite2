@@ -250,6 +250,10 @@ section {
   height: 75%;
 }
 
+.buy:hover .fa-cart-shopping {
+  color: #f9ae43;
+}
+
 /* NAVIGATION BOTTOM */
 
 .navigation-bottom {
@@ -1008,6 +1012,16 @@ LOADING SCREEN */
 .soda-can {
 }
 
+.loading-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 4vw;
+  font-weight: 600;
+  text-align: center;
+  color: #f9f6e5;
+  margin-top: -10vh;
+  margin-bottom: 5vh;
+}
+
 /* MOBILE */
 
 @media (max-width: 768px) {
@@ -1029,6 +1043,16 @@ LOADING SCREEN */
     width: 100%;
     height: 100vh;
     z-index: 20;
+  }
+
+  .loading-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 4vw;
+    font-weight: 600;
+    text-align: center;
+    color: #f9f6e5;
+    margin-top: 0vh;
+    margin-bottom: 5vh;
   }
 
   /* NAVIGATION BAR */

@@ -8,6 +8,7 @@ import { Section3 } from "./Sections/Section3";
 import { Section2 } from "./Sections/Section2";
 import { Section4 } from "./Sections/Section4";
 import { Section5 } from "./Sections/Section5";
+import { motion, AnimatePresence } from 'framer-motion';
 
 const LoadingScreen = () => {
   const { progress, active } = useProgress();
@@ -70,6 +71,9 @@ const LoadingScreen = () => {
               <rect x="25.0010262" y={liquidYPosition} width="49.9979477" height={currentLiquidHeight} fill="#f9f6e5" />
             </g>
           </svg>
+        </div>
+        <div className="loading-text">
+          {Math.round(progress)}%
         </div>
         <img src="./logonew.png" className="loading-logo" />
       </div>
