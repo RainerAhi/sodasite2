@@ -93,9 +93,9 @@ export const Section4 = () => {
             {hoveredContainer === 'mango' && (
               <motion.div
                 className='motion-image-left'
-                initial={{ x: '100%', scale: 0, opacity: 0 }}
+                initial={{ x: '150%', scale: 0, opacity: 0 }}
                 animate={{ x: '0%', scale: 1, opacity: 1, y: [0, -10, 0] }}
-                exit={{ x: '100%', scale: 0, opacity: 0 }}
+                exit={{ x: '150%', scale: 0, opacity: 0 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 20, y: { duration: 6, repeat: Infinity, repeatType: "loop", ease: "easeInOut" } }}
               >
                 <motion.img
@@ -109,9 +109,9 @@ export const Section4 = () => {
             {hoveredContainer === 'mango' && (
               <motion.div
                 className='motion-image-right'
-                initial={{ x: '-100%', scale: 0, opacity: 0 }}
+                initial={{ x: '-150%', scale: 0, opacity: 0 }}
                 animate={{ x: '0%', scale: 1, opacity: 1, y: [0, -10, 0] }}
-                exit={{ x: '-100%', scale: 0, opacity: 0 }}
+                exit={{ x: '-150%', scale: 0, opacity: 0 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 20, y: { duration: 6, repeat: Infinity, repeatType: "loop", ease: "easeInOut" } }}
               >
                 <motion.img
@@ -153,9 +153,9 @@ export const Section4 = () => {
             {hoveredContainer === 'cherry' && (
               <motion.div
                 className='motion-2-image-right'
-                initial={{ x: '-100%', scale: 0, opacity: 0 }}
+                initial={{ x: '-150%', scale: 0, opacity: 0 }}
                 animate={{ x: '0%', scale: 1, opacity: 1, y: [0, -10, 0] }}
-                exit={{ x: '-100%', scale: 0, opacity: 0 }}
+                exit={{ x: '-150%', scale: 0, opacity: 0 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 20, y: { duration: 6, repeat: Infinity, repeatType: "loop", ease: "easeInOut" } }}
               >
                 <motion.img
@@ -169,9 +169,9 @@ export const Section4 = () => {
             {hoveredContainer === 'cherry' && (
               <motion.div
                 className='motion-2-image-left'
-                initial={{ x: '100%', scale: 0, opacity: 0 }}
+                initial={{ x: '150%', scale: 0, opacity: 0 }}
                 animate={{ x: '0%', scale: 1, opacity: 1, y: [0, -10, 0] }}
-                exit={{ x: '100%', scale: 0, opacity: 0 }}
+                exit={{ x: '150%', scale: 0, opacity: 0 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 20, y: { duration: 6, repeat: Infinity, repeatType: "loop", ease: "easeInOut" } }}
               >
                 <motion.img

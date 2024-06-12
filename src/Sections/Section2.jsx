@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState, Suspense } from "react";
-import Model from '../Model'
+import Model from '../Model';
 import { motion } from "framer-motion";
-import { Canvas } from '@react-three/fiber'
-import { Environment, Float } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber';
+import { Environment, Float } from '@react-three/drei';
 
 export const Section2 = () => {
     const [isVisibleOne, setIsVisibleOne] = useState(false);
@@ -19,6 +19,8 @@ export const Section2 = () => {
     const threeRef = useRef(null);
     const fourRef = useRef(null);
     const fiveRef = useRef(null);
+
+    const audioRef = useRef(null); // Reference for the audio element
 
     useEffect(() => {
         const observerOne = new IntersectionObserver(([entry]) => {
@@ -62,26 +64,28 @@ export const Section2 = () => {
         setTimeout(() => {
             setScaleCenter(false);
         }, 400); // Reset the scale state after 2 seconds
+        audioRef.current.play(); // Play the audio file
     };
 
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-      const handleResize = () => {
-        setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed
-      };
-  
-      handleResize(); // Initial check
-      window.addEventListener('resize', handleResize);
-  
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed
+        };
+
+        handleResize(); // Initial check
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
     }, []);
 
     return (
         <section className="section two">
-            <div className="mobile-scroll"/>
+            <audio ref={audioRef} src="./opening2.mp3" /> {/* Audio element */}
+            <div className="mobile-scroll" />
             <div className="experience">
                 <Canvas shadows camera={{ position: [0, 0, 10], fov: 35 }} >
                     <Suspense>
@@ -114,7 +118,7 @@ export const Section2 = () => {
             </motion.div>
 
             {isMobile && (
-                    <motion.button
+                <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
@@ -124,7 +128,7 @@ export const Section2 = () => {
                     <h1 className="button-text">ROTATE CAN</h1>
                     <div className='wave' />
                 </motion.button>
-                )}
+            )}
 
             <div className="two-right">
                 <div className={`drink-introduction ${isVisibleThree ? 'visible' : ''}`} ref={threeRef}>
