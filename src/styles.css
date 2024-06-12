@@ -858,13 +858,14 @@ section {
   padding-block: 2rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 5rem;
   height: 100%;
+  background-color: #f9f6e550;
 }
 
 .scroller__inner img {
-  height: 6vw;
-  width: 6vw;
+  height: auto;
+  width: 15vw;
   position: relative;
 }
 
@@ -1580,8 +1581,8 @@ LOADING SCREEN */
 }
 
 .scroller__inner img {
-  height: 12vw;
-  width: 12vw;
+  height: auto;
+  width: 30vw;
   position: relative;
 }
 

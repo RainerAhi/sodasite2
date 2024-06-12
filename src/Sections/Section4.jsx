@@ -65,24 +65,24 @@ export const Section4 = () => {
           <h1 className='available-in-text'>AVAILABLE AT</h1>
           <div className='scroller' data-direction="left" data-speed="slow" >
             <div className="scroller__inner">
-              <img src="av2.jpg" alt="" />
-              <img src="av.jpg" alt="" />
-              <img src="av.jpg" alt="" />
-              <img src="av.jpg" alt="" />
-              <img src="av.jpg" alt="" />
-              <img src="av.jpg" alt="" />
-              <img src="av2.jpg" alt="" />
-              <img src="av.jpg" alt="" />
-              <img src="av.jpg" alt="" />
-              <img src="av.jpg" alt="" />
-              <img src="av.jpg" alt="" />
-              <img src="av.jpg" alt="" />
-              <img src="av2.jpg" alt="" />
-              <img src="av.jpg" alt="" />
-              <img src="av.jpg" alt="" />
-              <img src="av.jpg" alt="" />
-              <img src="av.jpg" alt="" />
-              <img src="av.jpg" alt="" />
+              <img src="a1.png" alt="" />
+              <img src="a2.png" alt="" />
+              <img src="a1.png" alt="" />
+              <img src="a2.png" alt="" />
+              <img src="a1.png" alt="" />
+              <img src="a2.png" alt="" />
+              <img src="a1.png" alt="" />
+              <img src="a2.png" alt="" />
+              <img src="a1.png" alt="" />
+              <img src="a2.png" alt="" />
+              <img src="a1.png" alt="" />
+              <img src="a2.png" alt="" />
+              <img src="a1.png" alt="" />
+              <img src="a2.png" alt="" />
+              <img src="a1.png" alt="" />
+              <img src="a2.png" alt="" />
+              <img src="a1.png" alt="" />
+              <img src="a2.png" alt="" />
             </div>
           </div>
         </div>
