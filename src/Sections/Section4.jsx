@@ -135,14 +135,6 @@ export const Section4 = () => {
               </motion.button>
             </div>
           </div>
-          <div ref={view1} className='view' />
-          <div className='mobile-scroll' />
-          <Canvas eventSource={ref} className='canvas'>
-            <View track={view1}>
-                  <Model2 position={[0, 0, 0]} />
-              <Environment preset='warehouse' />
-            </View>
-          </Canvas>
         </div>
         <div className='four-container container-two'>
           <AnimatePresence>
