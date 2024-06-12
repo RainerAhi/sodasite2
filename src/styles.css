@@ -960,9 +960,6 @@ html.lenis {
 }
 
 
-/* 
-LOADING SCREEN */
-
 .loading-screen {
   position: fixed;
   top: 0;
@@ -981,10 +978,13 @@ LOADING SCREEN */
   background-repeat: no-repeat;
   opacity: 1;
   transition: opacity 1s ease-in-out;
+  overflow: hidden;
 }
 
 .loading-screen--hidden {
   animation: fade-out 0.5s ease-in-out forwards 1s;
+  pointer-events: none;
+  overflow: hidden;
 }
 
 @keyframes fade-out {
