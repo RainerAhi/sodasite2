@@ -38,7 +38,7 @@ export default function Model2({props }) {
       .to(controlsRef.current.target, {
         x: 0,
         z: 0,
-        y: isMobile ? -1.25 : -0.5,
+        y: -0.5,
         scrollTrigger: {
           trigger: ".container-one",
           start: "top bottom",
@@ -49,9 +49,9 @@ export default function Model2({props }) {
       })
 
       .to(model2.current.scale, {
-        x: isMobile ? 0.45 : 0.6,
-        y: isMobile ? 0.45 : 0.6,
-        z: isMobile ? 0.45 : 0.6,
+        x: 0.6,
+        y: 0.6,
+        z: 0.6,
         scrollTrigger: {
           trigger: ".container-one",
           start: "top bottom",
