@@ -9,6 +9,8 @@ import { Section2 } from "./Sections/Section2";
 import { Section4 } from "./Sections/Section4";
 import { Section5 } from "./Sections/Section5";
 import { motion, AnimatePresence } from 'framer-motion';
+import { Section6 } from "./Sections/Section6";
+import { Section7 } from "./Sections/Section7";
 
 const LoadingScreen = ({ onLoaded }) => {
   const { progress, active } = useProgress();
@@ -143,6 +145,10 @@ function App() {
       <div className="background-container">
         <Section4 />
         <Section5 />
+      </div>
+      <div className="background-container">
+        <Section6 />
+        <Section7 />
       </div>
     </>
   );
