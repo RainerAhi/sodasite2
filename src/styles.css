@@ -1009,10 +1009,11 @@ section {
 .seven-content {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 10vh;
 }
 
 .seven-text {
@@ -1996,7 +1997,7 @@ LOADING SCREEN */
 .seven-content {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
