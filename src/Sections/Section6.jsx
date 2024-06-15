@@ -7,6 +7,7 @@ export const Section6 = () => {
     return (
         <section className="six">
             <div className="six-content">
+                <h1 className="six-text" >LET'S GET READY FOR SUMMER</h1>
                 <video 
                     src="/sodavideo.mp4" 
                     autoPlay 
