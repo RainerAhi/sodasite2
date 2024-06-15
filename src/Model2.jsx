@@ -79,20 +79,17 @@ export default function Model2({props }) {
     });
   }, []);
 
-  const desktopModelPath = "./mangocan.glb";
-  const mobileModelPath = "./mangocan.glb";
-
-  const { nodes, materials } = useGLTF(isMobile ? mobileModelPath : desktopModelPath);
-
+  const { nodes, materials } = useGLTF('/mangocan.glb')
   return (
     <>
-        <OrbitControls target={ [ 5, 0, 0 ] } ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />
-        <group scale={ 0.4 } {...props} dispose={null} ref={model2}>
-            <mesh castShadow receiveShadow geometry={nodes.can.geometry} material={materials.can} />
-        </group>
+    <OrbitControls target={ [ 5, 0, 0 ] } ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />
+
+    <group {...props} dispose={null}>
+      <mesh ref={model2} scale={0.4} castShadow receiveShadow geometry={nodes.can.geometry} material={materials.can} />
+    </group>
     </>
-  );
+  )
 }
 
-useGLTF.preload("./mangocan.glb")
-useGLTF.preload("./mangocan.glb");
+
+useGLTF.preload('/mangocan.glb')

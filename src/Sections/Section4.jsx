@@ -121,7 +121,7 @@ export const Section4 = () => {
               </motion.div>
             )}
           </AnimatePresence>
-          <div className='four-container-content' ref={ref} onMouseEnter={() => setHoveredContainer('mango')} onMouseLeave={() => setHoveredContainer(null)}>
+          <div className='four-container-content' onMouseEnter={() => setHoveredContainer('mango')} onMouseLeave={() => setHoveredContainer(null)}>
             <div className="four-container-bottom">
               <h1 className='four-container-text'>MANGO BLAST</h1>
               <motion.button
@@ -135,17 +135,14 @@ export const Section4 = () => {
               </motion.button>
             </div>
           </div>
-          <div ref={view1} className='view' />
           <div className='mobile-scroll' />
-          <Canvas eventSource={ref} className='canvas'>
-            <View track={view1}>
+          <Canvas>
               <Suspense fallback={<Loading />}>
                 <Float speed={2}>
                   <Model2 position={[0, 0, 0]} />
                 </Float>
               </Suspense>
               <Environment preset='warehouse' />
-            </View>
           </Canvas>
         </div>
         <div className='four-container container-two'>
@@ -195,17 +192,14 @@ export const Section4 = () => {
               </motion.button>
             </div>
           </div>
-          <div ref={view2} className='view' />
           <div className='mobile-scroll' />
-          <Canvas eventSource={ref2} className='canvas'>
-            <View track={view2}>
+          <Canvas >
               <Suspense fallback={<Loading />}>
                 <Float speed={2}>
                   <Model3 />
                 </Float>
               </Suspense>
               <Environment preset='warehouse' />
-            </View>
           </Canvas>
         </div>
       </div>
