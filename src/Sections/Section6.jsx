@@ -13,7 +13,7 @@ export const Section6 = () => {
                     autoPlay 
                     loop 
                     muted
-                    preload="metadata"
+                    preload="none"
                     className="background-video"
                 ></video>
             </div>
