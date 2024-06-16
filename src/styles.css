@@ -822,7 +822,7 @@ section {
 
 @keyframes glowing {
   0% { background-color: #7ecf86; box-shadow: 0 0 3px #7ecf86; }
-  50% { background-color: #7ecf86; box-shadow: 0 0 40px #7ecf86; }
+  50% { background-color: #7ecf86; box-shadow: 0 0 100px rgba(126, 207, 134, 0.7), 0 0 30px rgba(126, 207, 134, 1); }
   100% { background-color: #7ecf86; box-shadow: 0 0 3px #7ecf86; }
 }
 
@@ -1365,7 +1365,7 @@ html.lenis {
 
 .text-behind, .text-front, .text-behind-blur {
   font-family: 'Freudian One', sans-serif;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 300;
   line-height: 85%;
   height: 100%;

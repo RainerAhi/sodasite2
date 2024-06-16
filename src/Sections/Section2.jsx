@@ -122,7 +122,7 @@ export const Section2 = () => {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                    className="wave-button-mobile"
+                    className="wave-button-mobile glowing-button"
                     onClick={handleRotate}
                 >
                     <h1 className="button-text">ROTATE CAN</h1>
