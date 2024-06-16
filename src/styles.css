@@ -322,10 +322,50 @@ section {
   text-align: center;
 }
 
-.one-title {
+/* SECTION ONE MAIN TEXT */
+
+.headline-container{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+  pointer-events: all;
 }
 
-.title-back {
+.text-behind, .text-front, .text-behind-blur {
+  font-family: 'Freudian One', sans-serif;
+  font-size: 9.5vw;
+  font-weight: 300;
+  line-height: 85%;
+  height: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.text-behind {
+  color: #f9f6e5;
+  z-index: 0;
+  position: relative;
+}
+
+.text-behind-blur {
+  color: #f9f6e5;
+  filter: blur(7.5px);
+  -webkit-filter: blur(7.5px);
+  z-index: 0;
+  position: absolute;
+}
+
+.text-front {
+  color: transparent;
+  text-stroke: 0.1vw #f9f6e5;
+  -webkit-text-stroke: 0.1vw #f9f6e5;
+  z-index: 20;
+  position: absolute;
+}
+
+/* .title-back {
   font-family: 'Freudian One', sans-serif;
   font-size: 9.5vw;
   font-weight: 300;
@@ -334,27 +374,7 @@ section {
   margin-bottom: 0;
   margin-top: 0;
   position: relative;
-}
-
-.title-front {
-  font-family: 'Freudian One', sans-serif;
-  font-size: 9.5vw;
-  font-weight: 300;
-  line-height: 85%;
-  color: #f9f6e5;
-  margin-bottom: 0;
-  margin-top: 0;
-  z-index: 2;
-  position: relative;
-}
-
-.one-border {
-  width: 30%;
-  height: 1px;
-  border-top: 1px dashed #f9f6e5;
-  margin-top: 2vh;
-  margin-bottom: 2vh;
-}
+} */
 
 .title-description {
   font-family: 'Freudian One', sans-serif;
@@ -796,6 +816,16 @@ section {
   overflow: hidden;
 }
 
+.glowing-button {
+  animation: glowing 1500ms infinite;
+}
+
+@keyframes glowing {
+  0% { background-color: #7ecf86; box-shadow: 0 0 3px #7ecf86; }
+  50% { background-color: #7ecf86; box-shadow: 0 0 40px #7ecf86; }
+  100% { background-color: #7ecf86; box-shadow: 0 0 3px #7ecf86; }
+}
+
 /* WAVE BUTTON */
 
 .wave {
@@ -1013,7 +1043,6 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 10vh;
 }
 
 .seven-text {
@@ -1023,6 +1052,34 @@ section {
   margin-bottom: 2.5vh;
   margin-top: 10vh;
   color: #f9f6e5;
+}
+
+.seven-footer {
+  width: 100%;
+  height: 10vh;
+  background-color: #f9f6e5;
+  margin-top: 7.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  position: relative;
+}
+
+.footer-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  z-index: 100;
+}
+
+.footer-icons {
+  color: #1d1c1c;
+  font-size: 1.25vw;
+  cursor: pointer;
+  z-index: 100;
+  position: relative;
 }
 
 
@@ -1294,8 +1351,50 @@ html.lenis {
   height: 90%;
 }
 
-.one-title {
+/* SECTION ONE MAIN TEXT */
+
+.headline-container{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+  pointer-events: all;
+  margin-top: 10vh;
 }
+
+.text-behind, .text-front, .text-behind-blur {
+  font-family: 'Freudian One', sans-serif;
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: 85%;
+  height: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.text-behind {
+  color: #f9f6e5;
+  z-index: 0;
+  position: relative;
+}
+
+.text-behind-blur {
+  color: #f9f6e5;
+  filter: blur(7.5px);
+  -webkit-filter: blur(7.5px);
+  z-index: 0;
+  position: absolute;
+}
+
+.text-front {
+  color: transparent;
+  text-stroke: 0.4vw #f9f6e5;
+  -webkit-text-stroke: 0.4vw #f9f6e5;
+  z-index: 20;
+  position: absolute;
+}
+
 
 .title-back {
   font-family: 'Freudian One', sans-serif;
@@ -1385,7 +1484,7 @@ html.lenis {
 }
 
 .dottedLine svg {
-  width: 50%;
+  width: 80%;
   height: 100%;
   border-radius: inherit;
 }
@@ -1393,7 +1492,7 @@ html.lenis {
 .dottedLine .cls-1 {
   fill: none;
   stroke: #f9f6e5;
-  stroke-width: 2;
+  stroke-width: 5;
   stroke-dasharray: 5, 2;
   animation: dashAnimation 5s linear infinite;
 }
@@ -1916,7 +2015,7 @@ LOADING SCREEN */
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   overflow: hidden;
 }
 
@@ -2010,6 +2109,34 @@ LOADING SCREEN */
   margin-bottom: 2.5vh;
   margin-top: 10vh;
   color: #f9f6e5;
+}
+
+.seven-footer {
+  width: 100%;
+  height: 10vh;
+  background-color: #f9f6e5;
+  margin-top: 7.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  position: relative;
+}
+
+.footer-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+  z-index: 100;
+}
+
+.footer-icons {
+  color: #1d1c1c;
+  font-size: 1.25rem;
+  cursor: pointer;
+  z-index: 100;
+  position: relative;
 }
 
 

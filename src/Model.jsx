@@ -67,7 +67,7 @@ export default function Model({ rotate, setRotate, ...props }) {
       let { isMobile, isDesktop } = context.conditions;
 
       tl
-        .to(".one-title, .one-border", {
+        .to(" .one-border", {
           opacity: 0,
           yPercent: '-50',
           scrollTrigger: {

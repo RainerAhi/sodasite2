@@ -125,8 +125,13 @@ export const Section1 = () => {
             </div>
             <div className="one-content">
                 <div className="one-text-contents">
-                    <div className="one-title">
+                    {/* <div className="one-title">
                         <h1 className="title-back">CLASSIC DIALED SELTZERS,<br />MADE TO CONQUER</h1>
+                    </div> */}
+                    <div class="headline-container" >
+                        <h1 className="text-behind" >CLASSIC DIALED SELTZERS,<br />MADE TO CONQUER</h1>
+                        <h1 className="text-behind-blur">CLASSIC DIALED SELTZERS,<br />MADE TO CONQUER</h1>
+                        <h1 className="text-front">CLASSIC DIALED SELTZERS,<br />MADE TO CONQUER</h1>
                     </div>
                     <div className="dottedLine" style={{ opacity: hideScrollText ? 0 : 1, transition: "opacity 0.3s ease-in-out", pointerEvents: hideScrollText ? "none" : "auto", }}>
                         <svg viewBox="0 0 800 1">

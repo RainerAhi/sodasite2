@@ -18,12 +18,44 @@ export const Section7 = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-                className='wave-button'
+                className='wave-button glowing-button'
                 onClick={() => handleClick('https://www.dialedweb.com/lander')}
               >
                 <h1 className='button-text'>ORDER NOW</h1>
                 <div className='wave' />
               </motion.button>
+              <div className="seven-footer">
+                <div className="footer-icon-box">
+                <motion.div
+                        whileHover={{ y: -5 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                        onClick={() => handleClick('https://www.instagram.com/dialedweb')}
+                    >
+                        <i className="fa-brands footer-icons fa-instagram"></i>
+                    </motion.div>
+                    <motion.div
+                        whileHover={{ y: -5 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                        onClick={() => handleClick('https://www.youtube.com/channel/UC8-bljvEXqCTOF1-xdwFYtg')}
+                    >
+                        <i className="fa-brands footer-icons fa-youtube"></i>
+                    </motion.div>
+                    <motion.div
+                        whileHover={{ y: -5 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                        onClick={() => handleClick('https://www.instagram.com/dialedweb')}
+                    >
+                        <i className="fa-brands footer-icons fa-tiktok"></i>
+                    </motion.div>
+                    <motion.div
+                        whileHover={{ y: -5 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                        onClick={() => handleClick('mailto:support@dialedworldwide.com')}
+                    >
+                        <i className="fa-solid footer-icons fa-envelope"></i>
+                    </motion.div>
+                    </div>
+              </div>
           </div>
         </section>
       );
