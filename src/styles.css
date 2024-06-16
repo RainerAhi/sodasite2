@@ -1082,6 +1082,16 @@ section {
   position: relative;
 }
 
+.footer-text {
+  position: absolute;
+  bottom: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65vw;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0.25%;
+}
+
 
 /* COLORS */
 
@@ -2137,6 +2147,16 @@ LOADING SCREEN */
   cursor: pointer;
   z-index: 100;
   position: relative;
+}
+
+.footer-text {
+  position: absolute;
+  bottom: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0.25%;
 }
 
 
