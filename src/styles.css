@@ -365,7 +365,7 @@ section {
   position: absolute;
 }
 
-/* .title-back {
+.title-back {
   font-family: 'Freudian One', sans-serif;
   font-size: 9.5vw;
   font-weight: 300;
@@ -374,7 +374,7 @@ section {
   margin-bottom: 0;
   margin-top: 0;
   position: relative;
-} */
+}
 
 .title-description {
   font-family: 'Freudian One', sans-serif;
