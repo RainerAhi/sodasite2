@@ -67,17 +67,6 @@ export default function Model({ rotate, setRotate, ...props }) {
       let { isMobile, isDesktop } = context.conditions;
 
       tl
-        .to(" .one-border", {
-          opacity: 0,
-          yPercent: '-50',
-          scrollTrigger: {
-            trigger: ".two",
-            start: "top bottom",
-            end: "bottom 100%",
-            scrub: true,
-            immediateRender: false,
-          },
-        })
         .to(model.current.rotation, {
           x: Math.PI * 2,
           y: Math.PI * 2,
