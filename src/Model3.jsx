@@ -49,9 +49,9 @@ export default function Model3({props }) {
       })
 
       .to(model2.current.scale, {
-        x: 0.6,
-        y: 0.6,
-        z: 0.6,
+        x: 1.35,
+        y: 1.35,
+        z: 1.35,
         scrollTrigger: {
           trigger: ".container-two",
           start: "top bottom",
@@ -79,8 +79,8 @@ export default function Model3({props }) {
     });
   }, []);
 
-  const desktopModelPath = "./desktop.glb";
-  const mobileModelPath = "./mobile.glb";
+  const desktopModelPath = "./desktop2.glb";
+  const mobileModelPath = "./mobile2.glb";
 
   const { nodes, materials } = useGLTF(isMobile ? mobileModelPath : desktopModelPath);
 
@@ -94,5 +94,5 @@ export default function Model3({props }) {
   );
 }
 
-useGLTF.preload("./desktop.glb")
-useGLTF.preload("./mobile.glb");
+useGLTF.preload("./desktop2.glb")
+useGLTF.preload("./mobile2.glb");

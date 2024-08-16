@@ -128,7 +128,7 @@ export const Section1 = () => {
                     {/* <div className="one-title">
                         <h1 className="title-back">CLASSIC DIALED SELTZERS,<br />MADE TO CONQUER</h1>
                     </div> */}
-                    <div class="headline-container" >
+                    <div className="headline-container" >
                         <h1 className="text-behind" >CLASSIC DIALED SELTZERS,<br />MADE TO CONQUER</h1>
                         <h1 className="text-behind-blur">CLASSIC DIALED SELTZERS,<br />MADE TO CONQUER</h1>
                         <h1 className="text-front">CLASSIC DIALED SELTZERS,<br />MADE TO CONQUER</h1>
