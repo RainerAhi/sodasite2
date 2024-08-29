@@ -55,7 +55,7 @@ export const Section7 = () => {
                         <i className="fa-solid footer-icons fa-envelope"></i>
                     </motion.div>
                     </div>
-                    <h1 className="footer-text" >© DIALED LLC. All Rights Reserved</h1>
+                    <a href="https://www.dialedweb.com/" target="_blank" className="footer-text" >© DIALED LLC. All Rights Reserved</a>
               </div>
           </div>
         </section>

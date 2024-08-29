@@ -267,6 +267,7 @@ section {
   justify-content: space-between;
   padding: 0 2.5%;
   align-items: center;
+  pointer-events: none;
 }
 
 .navigation-bottom-left, .navigation-bottom-right {
@@ -1090,6 +1091,8 @@ section {
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 0.25%;
+  text-decoration: none;
+  color: #1d1c1c;
 }
 
 
